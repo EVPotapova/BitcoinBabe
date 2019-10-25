@@ -1,0 +1,43 @@
+{
+  "name": "babetestapp",
+  "version": "1.0.0",
+  "description": "Babe Test App",
+  "scripts": {
+    "watch": "gulp",
+    "build": "gulp build",
+    "build:prod": "gulp buidls:prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samarityanka",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-data": "^1.3.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-less-import": "^1.0.0",
+    "gulp-merge-json": "^1.3.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-style-inject": "^0.1.2",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^3.0.2",
+    "gulp.spritesmith": "^6.11.0",
+    "imagemin-pngquant": "^8.0.0",
+    "lesshint": "^6.3.7",
+    "nunjucks": "^3.2.0",
+    "opn": "^6.0.0"
+  }
+}

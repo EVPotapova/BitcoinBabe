@@ -1,0 +1,26 @@
+.mainMenu {
+    background-color: @primaryBgColor;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+}
+
+.mainMenu__menuItem {
+    padding-top: 20px;
+    height: 110px;
+}
+
+.mainMenu__menuItem:hover {
+    background-color: @primaryActiveBgColor;
+}
+
+.mainMenu__menuIcon {
+    fill: @primaryFontColor;
+}
+
+.mainMenu__menuItem:hover .mainMenu__menuIcon {
+    fill: @primaryActiveFontColor;
+}

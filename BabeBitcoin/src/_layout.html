@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>BitcoinBabe</title>
+</head>
+<body class="layout">
+    <div class="layout__mainMenu">
+        {% block mainMenu %}
+        {% endblock %}
+    </div>
+    <div class="layout__content">
+        {% block header %}
+        {% endblock %}
+        {% block body %}
+        {% endblock %}
+        {% block footer %}
+        {% endblock %}
+    </div>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/main.js"></script>
+</body>
+</html>

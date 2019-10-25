@@ -1,0 +1,26 @@
+{
+    "fileExtensions": [".less"],
+    "excludedFiles": ["vendor.less"],
+    "emptyRule": false,
+
+    "propertyOrdering": { // Make sure properties are sorted in a particular order
+	"enabled": false,
+	"style": "concentric"
+    },
+
+    "spaceAroundComma": { // Defines how commas in functions, mixins, selectors, etc. should be formatted by a space to aid readability.
+        "allowNewline": true
+    },
+
+    "decimalZero": "trailing",
+
+    "zeroUnit": { // Zero values should include a unit for consistency with other values.
+	"enabled": true,
+	"style": "no_unit"
+    },
+
+    "hexLength": { // Prefer longhand hex color declarations over short hand ones to be consistent with colors that can't be written using shorthand notation.
+        "style": "short"
+    }
+
+}

@@ -1,0 +1,140 @@
+html,
+.layout {
+  max-width: 1600px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.layout {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.layout__mainMenu {
+  width: 75px;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border-right: 1px solid #c70872;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.layout__content {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.layout__mainMenu:hover {
+  width: 150px;
+}
+
+@font-face {
+  font-family: 'Mina Regular';
+  font-weight: normal;
+  src: url("/fonts/Mina-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'AvenirLTStd Light';
+  font-weight: lighter;
+  src: url("/fonts/AvenirLTStd Light.otf") format('opentype');
+}
+
+/*
+grey(2598) - 7b7b7d
+
+
+grey(updating) - b8b8b9*/
+
+.body {
+  min-height: 60%;
+}
+
+.footer {
+  background-color: #ebe9e8;
+  min-height: 20%;
+}
+
+.footer_font_secondary {
+  color: #b9b8b8;
+  font-family: 'AvenirLTStd Light';
+}
+
+.header {
+  min-height: 20%;
+}
+
+.mainMenu {
+  background-color: #f5638c;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  text-align: center;
+}
+
+.mainMenu__menuItem {
+  padding-top: 20px;
+  height: 110px;
+}
+
+.mainMenu__menuItem:hover {
+  background-color: #ff7ca1;
+}
+
+.mainMenu__menuIcon {
+  fill: #ffffff;
+}
+
+.mainMenu__menuItem:hover .mainMenu__menuIcon {
+  fill: #e41092;
+}
+
+.mainMenu__menuItem-border-top {
+  border-top: 1px solid #de597f;
+}
+
+.mainMenu__menuItem-border-bottom {
+  border-bottom: 1px solid #de597f;
+}
+
+.mainMenu_font_primary {
+  font-family: 'Mina Regular';
+  color: #ffffff;
+}
