@@ -11,8 +11,20 @@
 {% endblock %}
 
 {% block body %}
-    {%include "body.html"%}
-{% endblock %}
+    <div class="body">
+
+        {% block topArea %}
+        <p>Home Page Body Area</p>
+        {% endblock %}
+
+        {% block messageArea %}
+        {% endblock %}
+
+        {% block contentArea %}
+        {% endblock %}
+
+    </div>
+    {% endblock %}
 
 {% block footer %}
     {%include "footer.html"%}

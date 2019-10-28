@@ -35,7 +35,13 @@
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="src\body.html" />
+    <Content Include="src\buyBitcoinPage.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\data\default-data.json" />
+    <Content Include="src\less\footer\_font\footer_font.less">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\webfonts\AvenirLTStd Light.otf" />
     <Content Include="src\webfonts\Mina-Regular.ttf" />
     <Content Include="src\footer.html" />
@@ -66,6 +72,7 @@
     <Folder Include="src\less\" />
     <Folder Include="src\less\body\" />
     <Folder Include="src\less\footer\" />
+    <Folder Include="src\less\footer\_font\" />
     <Folder Include="src\less\header\" />
     <Folder Include="src\less\mainMenu\" />
     <Folder Include="src\less\mainMenu\_border\" />

@@ -1,0 +1,31 @@
+﻿{% extends "./_layout.html"  %}
+
+
+
+{% block mainMenu %}
+{%include "mainMenu.html"%}
+{% endblock %}
+
+{% block header %}
+{%include "header.html"%}
+{% endblock %}
+
+{% block body %}
+<div class="body">
+
+    {% block topArea %}
+    <p>Buy Bitcoin Page Body Area</p>
+    {% endblock %}
+
+    {% block messageArea %}
+    {% endblock %}
+
+    {% block contentArea %}
+    {% endblock %}
+
+</div>
+{% endblock %}
+
+{% block footer %}
+{%include "footer.html"%}
+{% endblock %}
