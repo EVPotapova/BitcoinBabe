@@ -36,15 +36,10 @@
     <Content Include="README.md" />
     <Content Include="src\body.html" />
     <Content Include="src\data\default-data.json" />
-    <Content Include="src\fonts\AvenirLTStd Light.otf" />
-    <Content Include="src\fonts\Mina-Regular.ttf" />
+    <Content Include="src\webfonts\AvenirLTStd Light.otf" />
+    <Content Include="src\webfonts\Mina-Regular.ttf" />
     <Content Include="src\footer.html" />
     <Content Include="src\header.html" />
-    <Content Include="src\images\mainMenu\ICO_Sidebar_Buy_BTC.svg" />
-    <Content Include="src\images\mainMenu\ICO_Sidebar_History.svg" />
-    <Content Include="src\images\mainMenu\ICO_Sidebar_Log_out.svg" />
-    <Content Include="src\images\mainMenu\ICO_Sidebar_Sell_BTC.svg" />
-    <Content Include="src\images\mainMenu\ICO_Sidebar_Settings.svg" />
     <Content Include="src\index.html" />
     <Content Include="src\js\main.js" />
     <Content Include="src\less\body\body.less" />
@@ -65,10 +60,8 @@
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="src\data\" />
-    <Folder Include="src\fonts\" />
     <Folder Include="src\images\" />
     <Folder Include="src\images\icons\" />
-    <Folder Include="src\images\mainMenu\" />
     <Folder Include="src\js\" />
     <Folder Include="src\less\" />
     <Folder Include="src\less\body\" />
@@ -77,6 +70,7 @@
     <Folder Include="src\less\mainMenu\" />
     <Folder Include="src\less\mainMenu\_border\" />
     <Folder Include="src\less\mainMenu\_font\" />
+    <Folder Include="src\webfonts\" />
     <Folder Include="src\svg\" />
     <Folder Include="src\templates\" />
   </ItemGroup>

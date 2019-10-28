@@ -18,9 +18,22 @@
 }
 
 .mainMenu__menuIcon {
-    fill: @primaryFontColor;
+    fill: @whiteColor;
 }
 
 .mainMenu__menuItem:hover .mainMenu__menuIcon {
     fill: @primaryActiveFontColor;
+}
+
+.mainMenu__menuTitle {
+    font-family: @mainFont;
+    color: @whiteColor;
+    display: none; //TODO: To Modifier?
+    margin: 0;
+    font-weight: 600;
+}
+
+.mainMenu__menuItem:hover .mainMenu__menuTitle {
+    color: @primaryActiveFontColor;
+
 }

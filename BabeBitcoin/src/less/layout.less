@@ -20,8 +20,6 @@ html,
     width: 75px;
     flex-grow: 0;
     border-right: 1px solid @primaryBorderColor;
-    
-    
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
@@ -31,9 +29,18 @@ html,
 
 .layout__content {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    height: 100vh;
 }
 
 
 .layout__mainMenu:hover {
     width: 150px;
+}
+
+.layout__mainMenu:hover .mainMenu__menuTitle {
+    display: block;
 }

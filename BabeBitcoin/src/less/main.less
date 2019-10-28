@@ -2,13 +2,13 @@
 @font-face {
     font-family: 'Mina Regular';
     font-weight: normal;
-    src: url("/fonts/Mina-Regular.ttf") format("truetype");
+    src: url("/webfonts/Mina-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'AvenirLTStd Light';
     font-weight: lighter;
-    src: url("/fonts/AvenirLTStd Light.otf") format('opentype');
+    src: url("/webfonts/AvenirLTStd Light.otf") format('opentype');
 }
 
 @mainFont: 'Mina Regular';
@@ -18,7 +18,8 @@
 @primaryBorderColor: rgb(199,8,114, 0.25);
 @secondaryBorderColor: rgb(222,89,127,0.25);
 
-@primaryFontColor: #ffffff;
+@whiteColor: #ffffff;
+@blackColor: #000000;
 
 @primaryActiveBgColor: #ff7ca1;
 @primaryActiveFontColor: #e41092;
@@ -36,3 +37,9 @@ grey(2598) - 7b7b7d
 
 
 grey(updating) - b8b8b9*/
+
+@import "node_modules/@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "node_modules/@fortawesome/fontawesome-free/less/regular.less";
+@import "node_modules/@fortawesome/fontawesome-free/less/solid.less";
+@import "node_modules/@fortawesome/fontawesome-free/less/brands.less";
+@import "node_modules/@fortawesome/fontawesome-free/less/v4-shims.less";

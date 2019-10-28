@@ -37,7 +37,7 @@ var path = {
         js: dir.build + 'js/',
         css: dir.build + 'css/',
         img: dir.build + 'images/',
-        fonts: dir.build + 'fonts/',
+        fonts: dir.build + 'webfonts/',
         icons: dir.src + 'images/',
         favicon: dir.build,
         htmlFiles: dir.build + '**/*.html'
@@ -47,7 +47,7 @@ var path = {
         js: dir.src + 'js/main.js',
         css: dir.src + 'less/**/*.less',
         img: dir.src + 'images/**/*',
-        fonts: dir.src + 'fonts/*.*',
+        fonts: dir.src + 'webfonts/*.*',
         icons: dir.src + 'images/icons/*.png',
         retinaIcons: dir.src + 'images/icons/*@2x.png',
         favicon: dir.src + '*.ico',
@@ -60,7 +60,7 @@ var path = {
         js: dir.src + 'js/**/*.js',
         css: dir.src + 'less/**/*.less',
         img: dir.src + 'images/**/*',
-        fonts: dir.src + 'fonts/*.*',
+        fonts: dir.src + 'webfonts/*.*',
         icons: dir.src + 'images/icons/*',
         svg: dir.src + 'svg/*.svg',
         data: dir.src + 'data/**/*.json'
@@ -114,12 +114,16 @@ function svg_build() {
     return gulp.src(path.src.svg)
         .pipe(rigger())
         .pipe(gulp.dest(path.build.img));
+}
+
+function fa_build() {
+    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+        .pipe(gulp.dest(path.build.fonts));
 };
 
 function fonts_build() {
     return gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts))
-        ;
+        .pipe(gulp.dest(path.build.fonts));
 };
 
 function favicon_build() {
@@ -202,7 +206,7 @@ function requireUncached($module) {
 }
 
 var html_build = gulp.series(merge_json, delete_html, prepair_html, update_html);
-var open = gulp.series(clean_build, sprite_build, html_build, js_build, style_build, fonts_build, images_build, favicon_build, gulp.parallel(run_webserver, open_browser, watch));
+var open = gulp.series(clean_build, sprite_build, html_build, js_build, style_build, fa_build, fonts_build, images_build, favicon_build, gulp.parallel(run_webserver, open_browser, watch));
 
 exports.default = open;
 
