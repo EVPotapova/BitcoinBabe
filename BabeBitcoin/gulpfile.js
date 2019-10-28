@@ -43,7 +43,7 @@ var path = {
         htmlFiles: dir.build + '**/*.html'
     },
     src: {
-        html: dir.src + '*.html',
+        html: dir.src + '**/*.html',
         js: dir.src + 'js/main.js',
         css: dir.src + 'less/**/*.less',
         img: dir.src + 'images/**/*',

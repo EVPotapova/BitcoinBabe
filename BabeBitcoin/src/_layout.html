@@ -8,16 +8,24 @@
 </head>
 <body class="layout">
     <div class="layout__mainMenu">
-        {% block mainMenu %}
-        {% endblock %}
+        {%include "templates/mainMenu.html"%}
     </div>
     <div class="layout__content">
-        {% block header %}
-        {% endblock %}
-        {% block body %}
-        {% endblock %}
-        {% block footer %}
-        {% endblock %}
+
+        {%include "templates/header.html"%}
+
+        <div class="body">
+            {% block topArea %}
+            {% endblock %}
+
+            {% block messageArea %}
+            {% endblock %}
+
+            {% block contentArea %}
+            {% endblock %}
+        </div>
+
+        {%include "templates/footer.html"%}
     </div>
     <link rel="stylesheet" href="css/style.css" />
     <script src="./js/main.js"></script>

@@ -2,30 +2,14 @@
 
 
 
-{% block mainMenu %}
-    {%include "mainMenu.html"%}
-{% endblock %}
-
-{% block header %}
-    {%include "header.html"%}
-{% endblock %}
-
-{% block body %}
-    <div class="body">
-
-        {% block topArea %}
-        <p>Home Page Body Area</p>
-        {% endblock %}
-
-        {% block messageArea %}
-        {% endblock %}
-
-        {% block contentArea %}
-        {% endblock %}
-
-    </div>
+{% block topArea %}
+<p>Wallets</p>
     {% endblock %}
 
-{% block footer %}
-    {%include "footer.html"%}
-{% endblock %}
+    {% block messageArea %}
+<p>Have you thought...</p>
+    {% endblock %}
+
+{% block contentArea %}
+<p> There will be account info, history, etc</p>
+    {% endblock %}

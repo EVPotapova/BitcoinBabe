@@ -34,7 +34,6 @@
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\body.html" />
     <Content Include="src\buyBitcoinPage.html">
       <SubType>Code</SubType>
     </Content>
@@ -44,8 +43,8 @@
     </Content>
     <Content Include="src\webfonts\AvenirLTStd Light.otf" />
     <Content Include="src\webfonts\Mina-Regular.ttf" />
-    <Content Include="src\footer.html" />
-    <Content Include="src\header.html" />
+    <Content Include="src\templates\footer.html" />
+    <Content Include="src\templates\header.html" />
     <Content Include="src\index.html" />
     <Content Include="src\js\main.js" />
     <Content Include="src\less\body\body.less" />
@@ -60,7 +59,7 @@
     <Content Include="src\less\mainMenu\_font\mainMenu_font_primary.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\mainMenu.html" />
+    <Content Include="src\templates\mainMenu.html" />
     <Content Include="src\_layout.html" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +76,7 @@
     <Folder Include="src\less\mainMenu\" />
     <Folder Include="src\less\mainMenu\_border\" />
     <Folder Include="src\less\mainMenu\_font\" />
+    <Folder Include="src\partials\" />
     <Folder Include="src\webfonts\" />
     <Folder Include="src\svg\" />
     <Folder Include="src\templates\" />
