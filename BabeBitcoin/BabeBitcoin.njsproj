@@ -37,10 +37,59 @@
     <Content Include="src\buyBitcoinPage.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\data\default-data.json" />
+    <Content Include="src\data\messages.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\data\wallets.json" />
     <Content Include="src\less\footer\_font\footer_font.less">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\less\mainContentArea\mainContentArea.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\mainContentArea\_border\mainContentArea_border.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\mainContentArea\_margin\mainContentArea_margin.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\mainMenu\_margin\mainMenu__menuItem-margin-top.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\messages\messages.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\messages\_type\messages__item_type.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\walletsList\walletsList.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\walletsList\_border\walletsList__item_border.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\walletsList\_negative\walletsList__lastChangeValue_negative.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\templates\balanceInfo.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\templates\bitcoinPrice.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\templates\bitcoinSellingPrice.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\templates\mediaFeed.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\templates\messages.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\templates\transactionHistory.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\templates\walletsList.html" />
     <Content Include="src\webfonts\AvenirLTStd Light.otf" />
     <Content Include="src\webfonts\Mina-Regular.ttf" />
     <Content Include="src\templates\footer.html" />
@@ -73,9 +122,18 @@
     <Folder Include="src\less\footer\" />
     <Folder Include="src\less\footer\_font\" />
     <Folder Include="src\less\header\" />
+    <Folder Include="src\less\mainContentArea\_margin\" />
+    <Folder Include="src\less\mainContentArea\_border\" />
     <Folder Include="src\less\mainMenu\" />
+    <Folder Include="src\less\mainMenu\_margin\" />
     <Folder Include="src\less\mainMenu\_border\" />
     <Folder Include="src\less\mainMenu\_font\" />
+    <Folder Include="src\less\messages\" />
+    <Folder Include="src\less\messages\_type\" />
+    <Folder Include="src\less\mainContentArea\" />
+    <Folder Include="src\less\walletsList\" />
+    <Folder Include="src\less\walletsList\_negative\" />
+    <Folder Include="src\less\walletsList\_border\" />
     <Folder Include="src\partials\" />
     <Folder Include="src\webfonts\" />
     <Folder Include="src\svg\" />

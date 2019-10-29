@@ -1,0 +1,24 @@
+{
+  "Wallets": [
+    {
+      "title": "Wallet #1",
+      "id": 1,
+      "value": 0.12345678,
+      "lastOperation": {
+        "isNegative": false,
+        "period": "From Last Week",
+        "value": 0.023829
+      }
+    },
+    {
+      "title": "Wallet #2",
+      "id": 2,
+      "value": 0.002455,
+      "lastOperation": {
+        "isNegative": true,
+        "period": "From Last Week",
+        "value": 2.83921754
+      }
+    }
+  ]
+}
