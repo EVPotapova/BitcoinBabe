@@ -41,6 +41,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\data\wallets.json" />
+    <Content Include="src\less\buttons\_type\button_type.less">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\less\footer\_font\footer_font.less">
       <SubType>Code</SubType>
     </Content>
@@ -62,6 +65,9 @@
     <Content Include="src\less\messages\_type\messages__item_type.less">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\less\buttons\button.less">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\less\walletsList\walletsList.less">
       <SubType>Code</SubType>
     </Content>
@@ -69,6 +75,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\walletsList\_negative\walletsList__lastChangeValue_negative.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\partials\buttons.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\templates\balanceInfo.html">
@@ -119,6 +128,7 @@
     <Folder Include="src\js\" />
     <Folder Include="src\less\" />
     <Folder Include="src\less\body\" />
+    <Folder Include="src\less\buttons\_type\" />
     <Folder Include="src\less\footer\" />
     <Folder Include="src\less\footer\_font\" />
     <Folder Include="src\less\header\" />
@@ -131,6 +141,7 @@
     <Folder Include="src\less\messages\" />
     <Folder Include="src\less\messages\_type\" />
     <Folder Include="src\less\mainContentArea\" />
+    <Folder Include="src\less\buttons\" />
     <Folder Include="src\less\walletsList\" />
     <Folder Include="src\less\walletsList\_negative\" />
     <Folder Include="src\less\walletsList\_border\" />

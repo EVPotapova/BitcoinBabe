@@ -1,0 +1,7 @@
+﻿{% macro primary(text='Default Text', command='alert("params not passed");') %}
+<button class="button button_type_primary" onclick="{{command}}">{{ text }}</button>
+{% endmacro %}
+
+{% macro secondary(text='Default Text', command='alert("params not passed");') %}
+<button class="button button_type_secondary" onclick="{{command}}">{{ text }}</button>
+{% endmacro %}
