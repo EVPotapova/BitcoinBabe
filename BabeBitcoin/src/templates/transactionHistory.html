@@ -1,7 +1,23 @@
-﻿<div>
-    {% import "partials/buttons.html" as button %}
-    <div style="width: 70px;">
+﻿{% extends "partials/baseBlock.html"  %}
 
-        {{ button.secondary('View More') }}
-    </div>
+
+{% import "partials/buttons.html" as button %}
+
+
+{% block baseBlockHeader %}
+
+<div>
+    Transaction History
 </div>
+<div>
+
+    {{ button.secondary('View More') }}
+</div>
+{% endblock %}
+
+
+
+{% block baseBlockContent %}
+
+
+{% endblock %}

@@ -1,10 +1,23 @@
 
 .button_type_primary {
+    height: 50px;
     background-color: @primaryBgColor;
     color: @whiteColor;
+    border: 1px solid @primaryBorderColor;
 }
 
 .button_type_secondary {
+    height: 40px;
     background-color: @whiteColor;
     color: @primaryBgColor;
+    border: 1px solid @primaryBgColor;
+}
+
+.button_type_primary:hover {
+    background-color: darken(@primaryBgColor,10%);
+}
+
+
+.button_type_secondary:hover {
+    background-color: darken(@whiteColor,10%);
 }

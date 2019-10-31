@@ -37,14 +37,32 @@
     <Content Include="src\buyBitcoinPage.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\data\balance.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\data\buyBitcoin.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\data\messages.json">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\data\sellBitcoin.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\data\wallets.json" />
+    <Content Include="src\less\balanceInfo\balanceInfo.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\baseBlock\baseBlock.less">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\less\buttons\_type\button_type.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\footer\_font\footer_font.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\linear\linear.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\mainContentArea\mainContentArea.less">
@@ -57,6 +75,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\mainMenu\_margin\mainMenu__menuItem-margin-top.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\mediaFeed\mediaFeed.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\messages\messages.less">
@@ -77,7 +98,13 @@
     <Content Include="src\less\walletsList\_negative\walletsList__lastChangeValue_negative.less">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\partials\baseBlock.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\partials\buttons.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\partials\linear.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\templates\balanceInfo.html">
@@ -142,6 +169,10 @@
     <Folder Include="src\less\messages\_type\" />
     <Folder Include="src\less\mainContentArea\" />
     <Folder Include="src\less\buttons\" />
+    <Folder Include="src\less\baseBlock\" />
+    <Folder Include="src\less\balanceInfo\" />
+    <Folder Include="src\less\mediaFeed\" />
+    <Folder Include="src\less\linear\" />
     <Folder Include="src\less\walletsList\" />
     <Folder Include="src\less\walletsList\_negative\" />
     <Folder Include="src\less\walletsList\_border\" />

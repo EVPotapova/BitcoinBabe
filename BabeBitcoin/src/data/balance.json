@@ -1,0 +1,12 @@
+{
+  "Balance": {
+    "Value": 2598.63,
+    "Currency": "AUD",
+    "StatusMessage": "Updating...",
+    "Pending": {
+
+      "Value": 1259.22,
+      "Currency": "AUD"
+    }
+  }
+}

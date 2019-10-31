@@ -1,8 +1,23 @@
-﻿<div>
-    {% import "partials/buttons.html" as button %}
-    <div style="width: 70px;">
+﻿{% extends "partials/baseBlock.html"  %}
 
-        {{ button.secondary('See More') }}
-        {{ button.secondary('Update') }}
-    </div>
+
+{% import "partials/buttons.html" as button %}
+
+
+{% block baseBlockHeader %}
+
+<div>
+    Social Media Feed
 </div>
+<div class="mediaFeed_buttons">
+    {{ button.secondary('See More') }}
+    {{ button.secondary('Update') }}
+</div>
+    {% endblock %}
+
+
+
+    {% block baseBlockContent %}
+
+
+    {% endblock %}

@@ -1,7 +1,40 @@
-﻿<div>
-    {% import "partials/buttons.html" as button %}
-    <div style="width: 70px;">
+﻿{% extends "partials/baseBlock.html"  %}
 
+
+{% import "partials/buttons.html" as button %}
+
+
+{% block baseBlockHeader %}
+
+<div>
+    Account Balance
+</div>
+
+{% endblock %}
+
+
+
+{% block baseBlockContent %}
+
+<div class="balanceInfo__content">
+    <div>{{Balance.Value}} {{Balance.Currency}}</div>
+    <div>
+
+        {% if Balance.StatusMessage == '' %}
+        {% else %}
+        {{Balance.StatusMessage}}
+        {% endif %}
+
+    </div>
+    <div>
+        {% if Balance.Pending %}
+        Pending: {{Balance.Pending.Value}} {{Balance.Pending.Currency}}
+        {% else %}
+        {% endif %}
+    </div>
+    <div class="balanceInfo__button">
         {{ button.primary('Top Up', 'console.log("Top Up!");') }}
     </div>
 </div>
+
+{% endblock %}

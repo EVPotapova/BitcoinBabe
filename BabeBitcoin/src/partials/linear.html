@@ -1,0 +1,41 @@
+﻿{% macro graph(data, width=635, height=220) %}
+
+{% set graphHeight = (height - 120) %}
+    <div style="display: flex; justify-content: space-between; height: 40px;">
+    </div>
+    <svg height="{{graphHeight}}" width="{{width}}">
+
+        {% set oneYPoint = (data.Max - data.Min) / graphHeight %}
+
+        {% for point in data.Points %}
+
+        {%if loop.last%}
+        {%else%}
+
+        {% set y1 = graphHeight - ((point.Value - data.Min) * (1 / oneYPoint)) %}
+        {% set y2 = graphHeight - ((data.Points[loop.index0 + 1].Value - data.Min) * (1 / oneYPoint)) %}
+        {% set x1 = width / (loop.length - 1) * loop.index0 %}
+        {% set x2 = x1 + width / (loop.length-1) %}
+
+        <line x1="{{x1}}" y1="{{y1}}" x2="{{x2}}" y2="{{y2}}" class="linear__line" />
+
+        {%endif%}
+
+        {% endfor %}
+
+    </svg>
+    <div style="display: flex; justify-content: space-between; align-items:flex-end; height: 80px;">
+
+        {% for point in data.Points %}
+
+        <div style="display: flex; flex-direction: column;">
+            <div>
+                {{point.Day}}
+            </div>
+            <div>
+                {{point.Month}}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endmacro %}
