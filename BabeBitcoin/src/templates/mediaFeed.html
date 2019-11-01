@@ -2,6 +2,7 @@
 
 
 {% import "partials/buttons.html" as button %}
+{% import "partials/feedItem.html" as feedItem %}
 
 
 {% block baseBlockHeader %}
@@ -19,5 +20,11 @@
 
     {% block baseBlockContent %}
 
+<div class="mediaFeed__content">
+    {% for item in FeedItems %}
 
+    {{ feedItem.feed(item.Image, item.Name, item.Url, item.Date, item.Text)}}
+
+    {% endfor %}
+</div>
     {% endblock %}

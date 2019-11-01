@@ -1,4 +1,44 @@
 .linear__line {
     stroke: @primaryBgColor;
     stroke-width: 2;
+    font-family: @mainFont;
+}
+
+
+.linear__top {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    font-family: @mainFont;
+}
+
+.linear__xMonth {
+    font-size: 10px;
+    text-transform: uppercase;
+    fill: @darkGreyColor;
+    line-height: .7em;
+    font-family: @mainFont;
+}
+
+.linear__xDay {
+    display: flex;
+    flex-direction: column;
+    fill: @darkGreyColor;
+    font-family: @mainFont;
+    line-height: .7em;
+}
+
+.linear__dot {
+    stroke-width: 0;
+    fill: transparent;
+}
+
+.linear__dot:hover {
+    stroke: @primaryBgColor;
+    stroke-width: 2;
+    fill: @whiteColor;
+}
+
+.linear__background {
+    fill: @lightGreyColor;
 }

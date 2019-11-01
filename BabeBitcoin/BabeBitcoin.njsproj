@@ -43,6 +43,9 @@
     <Content Include="src\data\buyBitcoin.json">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\data\feedItems.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\data\messages.json">
       <SubType>Code</SubType>
     </Content>
@@ -50,6 +53,7 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\data\wallets.json" />
+    <Content Include="src\images\avatars\bitcoin_babe.svg" />
     <Content Include="src\less\balanceInfo\balanceInfo.less">
       <SubType>Code</SubType>
     </Content>
@@ -57,6 +61,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\buttons\_type\button_type.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\feedItem.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\footer\_font\footer_font.less">
@@ -102,6 +109,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\partials\buttons.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\partials\feedItem.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\partials\linear.html">
@@ -152,6 +162,7 @@
     <Folder Include="src\data\" />
     <Folder Include="src\images\" />
     <Folder Include="src\images\icons\" />
+    <Folder Include="src\images\avatars\" />
     <Folder Include="src\js\" />
     <Folder Include="src\less\" />
     <Folder Include="src\less\body\" />
