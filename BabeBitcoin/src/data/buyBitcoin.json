@@ -7,7 +7,25 @@
     "Points": [
       {
         "Value": 3123.53,
-        "Day": 26,
+        "Day": 19,
+        "Month": "Dec",
+        "Year": 2018
+      },
+      {
+        "Value": 4123.53,
+        "Day": 21,
+        "Month": "Dec",
+        "Year": 2018
+      },
+      {
+        "Value": 5123.53,
+        "Day": 23,
+        "Month": "Dec",
+        "Year": 2018
+      },
+      {
+        "Value": 4123.53,
+        "Day": 25,
         "Month": "Dec",
         "Year": 2018
       },
@@ -18,40 +36,32 @@
         "Year": 2018
       },
       {
-        "Value": 3123.53,
-        "Day": 28,
+        "Value": 9123.53,
+        "Day": 29,
         "Month": "Dec",
         "Year": 2018
       },
       {
         "Value": 11492.15,
-        "Day": 30,
-        "Month": "Dec",
-        "Year": 2018
-      },
-
-
-      {
-        "Value": 3123.53,
         "Day": 31,
         "Month": "Dec",
         "Year": 2018
       },
       {
-        "Value": 8123.86,
-        "Day": 1,
-        "Month": "Jan",
-        "Year": 2019
-      },
-      {
-        "Value": 3123.53,
+        "Value": 7123.86,
         "Day": 2,
         "Month": "Jan",
         "Year": 2019
       },
       {
-        "Value": 11492.15,
-        "Day": 3,
+        "Value": 7523.53,
+        "Day": 6,
+        "Month": "Jan",
+        "Year": 2019
+      },
+      {
+        "Value": 7123.86,
+        "Day": 8,
         "Month": "Jan",
         "Year": 2019
       }

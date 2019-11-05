@@ -2,33 +2,128 @@
 
 {% set graphHeight = (height-120) %}
 {% set graphWidth = (width-25) %}
+{% set minmaxW = 75 %}
+{% set minmaxH = 35 %}
+{% set tooltipW = 80 %}
+{% set tooltipH = 45 %}
+{% set dotR = 5 %}
+{% set arrow = 10 %}
 
-    <svg height="{{height}}" width="{{width}}">
+    <svg height="{{height}}" width="{{width}}" class="linear__svg">
+        <defs>
+            <g>
+                <linearGradient id="grid_gradient_transparent" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" class="linear__gridLine linear__gridLine_start_transparent" />
+                    <stop offset="20%" class="linear__gridLine linear__gridLine_start_transparent" />
+                    <stop offset="100%" class="linear__gridLine" />
+                </linearGradient>
+                <linearGradient id="grid_gradient_white" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" class="linear__gridLine linear__gridLine_start_white" />
+                    <stop offset="20%" class="linear__gridLine linear__gridLine_start_white" />
+                    <stop offset="100%" class="linear__gridLine" />
+                </linearGradient>
+            </g>
+        </defs>
 
         {% set oneYPoint = (data.Max - data.Min) / graphHeight %}
 
         {% for point in data.Points %}
 
-        {% set y1 = graphHeight + 60 - ((point.Value - data.Min) * (1 / oneYPoint)) %}
-        {% set y2 = graphHeight + 60 - ((data.Points[loop.index0 + 1].Value - data.Min) * (1 / oneYPoint)) %}
-        {% set x1 = graphWidth / (loop.length - 1) * loop.index0 %}
-        {% set x2 = x1 + graphWidth / (loop.length-1) %}
+            {% set y1 = graphHeight + 60 - ((point.Value - data.Min) * (1 / oneYPoint)) %}
+
+            {%if loop.last%}
+                {% set y2 = (y1+20) %}
+            {%else%}
+                {% set y2 = graphHeight + 60 - ((data.Points[loop.index0 + 1].Value - data.Min) * (1 / oneYPoint)) %}
+            {%endif%}
+
+            {% set x1 = graphWidth / (loop.length - 1) * loop.index0 %}
+            {% set x2 = x1 + graphWidth / (loop.length-1) %}
+            {% set mid = ((x2 + x1) / 2) %}
 
 
+            <!--background-->
+            <polygon points="{{x1}} {{height}}, {{x2}} {{height}}, {{x2}} {{y2}}, {{x1}} {{y1}}" class="linear__background" />
 
-        <polygon points="{{x1}} {{height}}, {{x2}} {{height}}, {{x2}} {{y2}}, {{x1}} {{y1}}" class="linear__background" />
+            <!--gridlines-->
+            <!--<polygon points="{{mid}} {{height}}, {{mid+1}} {{height}}, {{mid+1}} 0, {{mid}} 0" fill="url(#grid_gradient)" />
+            <polygon points="{{x2}} {{height}}, {{x2+1}} {{height}}, {{x2+1}} 0, {{x2}} 0" fill="url(#grid_gradient)" />
+            <polygon points="{{(mid + x1) / 2}} {{height}}, {{(mid + x1) / 2+1}} {{height}}, {{(mid + x1) / 2+1}} 0, {{(mid + x1) / 2}} 0" fill="url(#grid_gradient_transparent)" />
+            <polygon points="{{(mid + x2) / 2}} {{height}}, {{(mid + x2) / 2+1}} {{height}}, {{(mid + x2) / 2+1}} 0, {{(mid + x2) / 2}} 0" fill="url(#grid_gradient_transparent)" />-->
+        
+        {% endfor %}
 
-        {%if loop.last%}
-        {%else%}
-        <line x1="{{x1}}" y1="{{y1}}" x2="{{x2}}" y2="{{y2}}" class="linear__line" />
-        {%endif%}
+        {% for point in data.Points %}
 
-        <circle cx="{{x1}}" cy="{{y1}}" r="10" class="linear__dot" />
+            {% set y1 = graphHeight + 60 - ((point.Value - data.Min) * (1 / oneYPoint)) %}
 
-        <text x="{{x1}}" y="{{height-10}}" class="linear__xDay">{{point.Day}}</text>
-        <text x="{{x1}}" y="{{height}}" class="linear__xMonth">{{point.Month}}</text>
+            {%if loop.last%}
+                {% set y2 = (y1+20) %}
+            {%else%}
+                {% set y2 = graphHeight + 60 - ((data.Points[loop.index0 + 1].Value - data.Min) * (1 / oneYPoint)) %}
+            {%endif%}
+
+            {% set x1 = graphWidth / (loop.length - 1) * loop.index0 %}
+            {% set x2 = x1 + graphWidth / (loop.length-1) %}
+            {% set mid = ((x2 + x1) / 2) %}
+
+
+            <!--x measure text-->
+            <text x="{{x1}}" y="{{height-10}}" class="linear__xDay">{{point.Day}}</text>
+            <text x="{{x1}}" y="{{height}}" class="linear__xMonth">{{point.Month}}</text>
+
+            <!--mainline-->
+            <line x1="{{x1}}" y1="{{y1}}" x2="{{x2}}" y2="{{y2}}" class="linear__line" />
+
+        {% endfor %}
+
+        {% for point in data.Points %}
+
+            {% set y1 = graphHeight + 60 - ((point.Value - data.Min) * (1 / oneYPoint)) %}
+
+            {% set x1 = graphWidth / (loop.length - 1) * loop.index0 %}
+
+
+            <!--max-min legend-->
+            {%if point.Value == data.Min %}
+                {%if loop.last%}
+                    <polygon points="{{x1-minmaxW-dotR}} {{y1 + minmaxH}},{{x1-dotR}} {{y1 + minmaxH}},{{x1-dotR}} {{y1 }},{{x1 - minmaxW-dotR}} {{y1 }}" class="linear__legend"></polygon>
+                {%else%}
+                    <polygon points="{{x1+dotR}} {{y1 + minmaxH}},{{x1 + minmaxW+dotR}} {{y1 + minmaxH}},{{x1 + minmaxW+dotR}} {{y1 }},{{x1+dotR}} {{y1 }}" class="linear__legend"></polygon>
+                {%endif%}
+            {%elif point.Value == data.Max %}
+                {%if loop.last%}
+                    <polygon points="{{x1-minmaxW-dotR}} {{y1}},{{x1-dotR}} {{y1}},{{x1-dotR}} {{y1 - minmaxH}},{{x1-minmaxW-dotR}} {{y1 - minmaxH}}" class="linear__legend"></polygon>
+                {%else%}
+                    <polygon points="{{x1+dotR}} {{y1}},{{x1 + minmaxW+dotR}} {{y1}},{{x1 + minmaxW+dotR}} {{y1 - minmaxH}},{{x1+dotR}} {{y1 - minmaxH}}" class="linear__legend"></polygon>
+                {%endif%}
+            {%else%}
+
+            {%endif%}
+        
+        {% endfor %}
+
+        {% for point in data.Points %}
+
+            {% set y1 = graphHeight + 60 - ((point.Value - data.Min) * (1 / oneYPoint)) %}
+
+
+            {% set x1 = graphWidth / (loop.length - 1) * loop.index0 %}
+
+
+            <!--dots-->
+            <circle cx="{{x1}}" cy="{{y1}}" r="{{dotR}}" class="linear__dot" />
+        
+
+            <!--tooltips-->
+            {%if loop.last%}
+                <polygon points="{{x1-dotR-arrow}} {{y1+tooltipH/2}},{{x1-dotR-arrow}} {{y1-tooltipH/2}},{{x1-tooltipW-dotR-arrow}} {{y1-tooltipH/2}},{{x1-tooltipW-dotR-arrow}} {{y1+tooltipH/2}}" class="linear__tooltip" fill="url(#grid_gradient_white)"></polygon>
+            {%else%}
+                <polygon points="{{x1+dotR+arrow}} {{y1+tooltipH/2}},{{x1+dotR+arrow}} {{y1-tooltipH/2}},{{x1+tooltipW+dotR+arrow}} {{y1-tooltipH/2}},{{x1+tooltipW+dotR+arrow}} {{y1+tooltipH/2}}" class="linear__tooltip" fill="url(#grid_gradient_white)"></polygon>
+            {%endif%}
+
 
         {% endfor %}
 
     </svg>
-    {% endmacro %}
+{% endmacro %}

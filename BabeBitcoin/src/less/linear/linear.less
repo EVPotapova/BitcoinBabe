@@ -1,7 +1,11 @@
 .linear__line {
-    stroke: @primaryBgColor;
+    stroke: @primaryActiveFontColor;
     stroke-width: 2;
     font-family: @mainFont;
+}
+.linear__gridLine {
+    stop-color: darken(@lightGreyColor, 7%);
+    stop-opacity: 1;
 }
 
 
@@ -39,6 +43,28 @@
     fill: @whiteColor;
 }
 
+.linear__dot:hover + .linear__tooltip {
+    display: block;
+}
+
+.linear__tooltip {
+    display: none;
+    stroke-width: 1;
+    stroke: @lightGreyColor;
+    stroke-linejoin: round;
+}
+
 .linear__background {
     fill: @lightGreyColor;
+}
+
+.linear__legend {
+    fill: @whiteColor;
+    stroke-width: 1;
+    stroke: @lightGreyColor;
+    stroke-linejoin: round;
+}
+
+.linear__svg {
+   background-color: white;
 }

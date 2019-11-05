@@ -7,8 +7,14 @@
 
 {% block baseBlockHeader %}
 
-<div>
-    Bitcoin Price: {{BuyBitcoin.CurrentPrice}} {{BuyBitcoin.Currency}}
+<div class="bitcoinPrice">
+    Bitcoin Price:
+    <div class="bitcoinPrice__price">
+        &nbsp;{{BuyBitcoin.CurrentPrice}}
+    </div>
+    <div class="bitcoinPrice__currency">
+        &nbsp;{{BuyBitcoin.Currency}}
+    </div>
 </div>
 <div>
 
@@ -19,5 +25,7 @@
 
 
 {% block baseBlockContent %}
-    {{ linear.graph(BuyBitcoin, 635,220) }}
+<div class="bitcoinPrice__content">
+    {{ linear.graph(BuyBitcoin, 570,220) }}
+</div>
 {% endblock %}

@@ -1,60 +1,70 @@
 {
-    "SellBitcoin": {
-        "CurrentPrice": 14848.82,
-        "Currency": "AUD",
-        "Min": 3123.53,
-        "Max": 11492.15,
-        "Points": [
-            {
-                "Value": 3123.53,
-                "Day": 26,
-                "Month": "Dec",
-                "Year": 2018
-            },
-            {
-                "Value": 8123.86,
-                "Day": 27,
-                "Month": "Dec",
-                "Year": 2018
-            },
-            {
-                "Value": 3123.53,
-                "Day": 28,
-                "Month": "Dec",
-                "Year": 2018
-            },
-            {
-                "Value": 11492.15,
-                "Day": 30,
-                "Month": "Dec",
-                "Year": 2018
-            },
-
-
-            {
-                "Value": 3123.53,
-                "Day": 31,
-                "Month": "Dec",
-                "Year": 2018
-            },
-            {
-                "Value": 8123.86,
-                "Day": 1,
-                "Month": "Jan",
-                "Year": 2019
-            },
-            {
-                "Value": 3123.53,
-                "Day": 2,
-                "Month": "Jan",
-                "Year": 2019
-            },
-            {
-                "Value": 11492.15,
-                "Day": 3,
-                "Month": "Jan",
-                "Year": 2019
-            }
-        ]
-    }
+  "SellBitcoin": {
+    "CurrentPrice": 12121.22,
+    "Currency": "AUD",
+    "Min": 3123.53,
+    "Max": 3492.15,
+    "Points": [
+      {
+        "Value": 3492.15,
+        "Day": 19,
+        "Month": "Dec",
+        "Year": 2018
+      },
+      {
+        "Value": 3350,
+        "Day": 21,
+        "Month": "Dec",
+        "Year": 2018
+      },
+      {
+        "Value": 3300,
+        "Day": 23,
+        "Month": "Dec",
+        "Year": 2018
+      },
+      {
+        "Value": 3377.03,
+        "Day": 25,
+        "Month": "Dec",
+        "Year": 2018
+      },
+      {
+        "Value": 3200,
+        "Day": 27,
+        "Month": "Dec",
+        "Year": 2018
+      },
+      {
+        "Value": 3250,
+        "Day": 29,
+        "Month": "Dec",
+        "Year": 2018
+      },
+      {
+        "Value": 3200,
+        "Day": 31,
+        "Month": "Dec",
+        "Year": 2018
+      },
+      {
+        "Value": 3337.03,
+        "Day": 2,
+        "Month": "Jan",
+        "Year": 2019
+      },
+      {
+        "Value": 3237.03,
+        "Day": 6,
+        "Month": "Jan",
+        "Year": 2019
+      },
+      {
+        "Value": 3123.53,
+        "Day": 8,
+        "Month": "Jan",
+        "Year": 2019
+      }
+    ]
+  }
 }

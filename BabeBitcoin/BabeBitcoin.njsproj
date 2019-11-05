@@ -63,6 +63,12 @@
     <Content Include="src\less\baseBlock\baseBlock.less">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\less\bitcoinPrice\bitcoinPrice.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\bitcoinSellPrice\bitcoinSellPrice.less">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\less\buttons\_type\button_type.less">
       <SubType>Code</SubType>
     </Content>
@@ -73,6 +79,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\linear\linear.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\linear\_start\linear__gridLine_start.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\mainContentArea\mainContentArea.less">
@@ -100,6 +109,12 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\transactionHistory\transactionHistory.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\transactionHistory\_negative\transactionHistory__amount_negative.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\transactionHistory\_width\transactionHistory__cell_width.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\walletsList\walletsList.less">
@@ -176,6 +191,7 @@
     <Folder Include="src\less\footer\" />
     <Folder Include="src\less\footer\_font\" />
     <Folder Include="src\less\header\" />
+    <Folder Include="src\less\linear\_start\" />
     <Folder Include="src\less\mainContentArea\_margin\" />
     <Folder Include="src\less\mainContentArea\_border\" />
     <Folder Include="src\less\mainMenu\" />
@@ -190,7 +206,11 @@
     <Folder Include="src\less\balanceInfo\" />
     <Folder Include="src\less\mediaFeed\" />
     <Folder Include="src\less\linear\" />
+    <Folder Include="src\less\bitcoinSellPrice\" />
+    <Folder Include="src\less\bitcoinPrice\" />
     <Folder Include="src\less\transactionHistory\" />
+    <Folder Include="src\less\transactionHistory\_width\" />
+    <Folder Include="src\less\transactionHistory\_negative\" />
     <Folder Include="src\less\walletsList\" />
     <Folder Include="src\less\walletsList\_negative\" />
     <Folder Include="src\less\walletsList\_border\" />
