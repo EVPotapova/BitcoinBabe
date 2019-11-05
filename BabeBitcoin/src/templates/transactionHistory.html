@@ -1,11 +1,8 @@
-﻿{% extends "partials/baseBlock.html"  %}
-
+﻿{% extends "partials/baseBlock.html" %}
 
 {% import "partials/buttons.html" as button %}
 
-
 {% block baseBlockHeader %}
-
 <div>
     Transaction History
 </div>
@@ -15,9 +12,60 @@
 </div>
 {% endblock %}
 
-
-
 {% block baseBlockContent %}
 
+<div class="transactionHistory__table">
 
+    <div class="transactionHistory__headers">
+        <div class="transactionHistory__cell width_150">
+            Date&nbsp;
+            <a href="#"> <i class="fa fa-sort-amount-down-alt transactionHistory__sortIcon"></i></a>
+        </div>
+        <div class="transactionHistory__cell width_280">
+            Type of transaction&nbsp;
+            <a href="#"> <i class="fa fa-sort-amount-down-alt transactionHistory__sortIcon"></i></a>
+        </div>
+        <div class="transactionHistory__cell width_100">
+            Amount&nbsp;
+            <a href="#"> <i class="fa fa-sort-amount-down-alt transactionHistory__sortIcon"></i></a>
+        </div>
+        <div class="transactionHistory__cell">
+            Status&nbsp;
+            <a href="#"> <i class="fa fa-sort-amount-down-alt transactionHistory__sortIcon"></i></a>
+        </div>
+    </div>
+
+    <div class="transactionHistory__body">
+
+        {% for item in Transactions %}
+        <div class="transactionHistory__row">
+            <div class="transactionHistory__cell width_150">
+                {{item.Date}}
+                <div class="transactionHistory__time">
+                    &nbsp;{{item.Time}}
+                </div>
+            </div>
+
+            <div class="transactionHistory__cell width_280">
+                {% if item.Source %}
+                {{item.Type}} <div class="transactionHistory__source">&nbsp;- {{item.Source}}</div>
+                {% elif item.Value %}
+                {{item.Type}}: <div class="transactionHistory__value">&nbsp;{{item.Value}}</div> <div class="transactionHistory__valueCurrency">&nbsp;BTC</div>
+                {% endif %}
+            </div>
+
+            <div class="transactionHistory__cell width_100">
+
+                {% if item.Amount>0 %}
+                <i class="fa fa-plus-circle transactionHistory__amount"></i>&nbsp;{{item.Amount}} {{item.AmountCurrency}}
+                {% else %}
+                <i class="fa fa-minus-circle transactionHistory__amount_negative"></i>&nbsp;{{item.Amount * -1}} {{item.AmountCurrency}}
+                {% endif %}
+            </div>
+
+            <div class="transactionHistory__cell">{{item.Status}}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

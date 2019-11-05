@@ -52,6 +52,9 @@
     <Content Include="src\data\sellBitcoin.json">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\data\transactions.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\data\wallets.json" />
     <Content Include="src\images\avatars\bitcoin_babe.svg" />
     <Content Include="src\less\balanceInfo\balanceInfo.less">
@@ -94,6 +97,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\buttons\button.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\transactionHistory\transactionHistory.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\walletsList\walletsList.less">
@@ -184,6 +190,7 @@
     <Folder Include="src\less\balanceInfo\" />
     <Folder Include="src\less\mediaFeed\" />
     <Folder Include="src\less\linear\" />
+    <Folder Include="src\less\transactionHistory\" />
     <Folder Include="src\less\walletsList\" />
     <Folder Include="src\less\walletsList\_negative\" />
     <Folder Include="src\less\walletsList\_border\" />

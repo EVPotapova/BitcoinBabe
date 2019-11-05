@@ -1,0 +1,54 @@
+{
+  "Transactions": [
+    {
+      "Date": "10.01.2018",
+      "Time": "22:04",
+      "Type": "Flat Deposit",
+      "Source": "Bank transfer Payment",
+      "Value": null,
+      "Amount": 1001,
+      "AmountCurrency": "AUD",
+      "Status": "Executed"
+    },
+    {
+      "Date": "10.01.2018",
+      "Time": "20:15",
+      "Type": "Flat Deposit",
+      "Source": "Bank transfer Payment",
+      "Value": null,
+      "Amount": 3,
+      "AmountCurrency": "AUD",
+      "Status": "Pending"
+    },
+    {
+      "Date": "10.01.2018",
+      "Time": "12:07",
+      "Type": "Flat Deposit",
+      "Source": "Cash Deposit",
+      "Value": null,
+      "Amount": 15,
+      "AmountCurrency": "AUD",
+      "Status": "Awaiting Verification"
+    },
+    {
+      "Date": "10.01.2018",
+      "Time": "11:12",
+      "Type": "BTC Withdrawal",
+      "Source": null,
+      "Value": 0.12345678,
+      "Amount": -50,
+      "AmountCurrency": "AUD",
+      "Status": "Executed"
+    },
+    {
+      "Date": "10.01.2018",
+      "Time": "10:04",
+      "Type": "Flat Deposit",
+      "Source": "Bank transfer Payment",
+      "Value": null,
+      "Amount": 777,
+      "AmountCurrency": "AUD",
+      "Status": "Executed"
+    }
+  ]
+}

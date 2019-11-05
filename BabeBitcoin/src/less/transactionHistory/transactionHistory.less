@@ -1,0 +1,97 @@
+.transactionHistory__table {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: @mainFont;
+    color: @darkGreyColor;
+    font-size: 14px;
+}
+
+.transactionHistory__row {
+    min-height: 48px;
+    display: flex;
+    border-bottom: 1px solid @lightGreyColor;
+}
+
+.transactionHistory__headers {
+    min-height: 48px;
+    display: flex;
+    color: @blackColor;
+    border-bottom: 1px solid @lightGreyColor;
+    background-color: darken(@whiteColor,1%);
+}
+
+.transactionHistory__cell {
+    padding: 15px 0 15px 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: baseline;
+}
+
+.transactionHistory__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.transactionHistory__column {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.width_150 {
+    width: 135px;
+}
+
+.width_280 {
+    width: 245px;
+}
+
+.width_100 {
+    width: 110px;
+}
+
+.transactionHistory__time {
+    color: @timeColor;
+}
+
+.transactionHistory__amount {
+    color: @positiveFontColor;
+}
+
+.transactionHistory__amount_negative {
+    color: @neutralFontColor;
+}
+
+.transactionHistory__source {
+    color: @greyColor;
+}
+
+.transactionHistory__value {
+    color: @positiveFontColor;
+}
+.transactionHistory__valueCurrency {
+    color: @positiveFontColor;
+    font-size: 10px;
+}
+
+.transactionHistory__sortIcon {
+    color: @darkGreyColor;
+    display: none;
+    font-size: 12px;
+}
+
+.transactionHistory__cell:hover i {
+    display: block;
+}
+
+.transactionHistory__headers a:link {
+    text-decoration: none;
+}
+
+.transactionHistory__headers a:visited {
+    text-decoration: none;
+}
