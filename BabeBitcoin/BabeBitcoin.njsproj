@@ -81,9 +81,7 @@
     <Content Include="src\less\linear\linear.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\linear\_start\linear__gridLine_start.less">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="src\less\linear\_start\linear__gridLine_start.less" />
     <Content Include="src\less\mainContentArea\mainContentArea.less">
       <SubType>Code</SubType>
     </Content>
@@ -106,6 +104,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\buttons\button.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\spin\spin.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\transactionHistory\transactionHistory.less">
@@ -136,6 +137,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\partials\linear.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\partials\spin.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\templates\balanceInfo.html">
@@ -208,6 +212,7 @@
     <Folder Include="src\less\linear\" />
     <Folder Include="src\less\bitcoinSellPrice\" />
     <Folder Include="src\less\bitcoinPrice\" />
+    <Folder Include="src\less\spin\" />
     <Folder Include="src\less\transactionHistory\" />
     <Folder Include="src\less\transactionHistory\_width\" />
     <Folder Include="src\less\transactionHistory\_negative\" />

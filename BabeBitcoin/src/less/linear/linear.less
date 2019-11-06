@@ -3,11 +3,10 @@
     stroke-width: 2;
     font-family: @mainFont;
 }
-.linear__gridLine {
+.linear__modules {
     stop-color: darken(@lightGreyColor, 7%);
     stop-opacity: 1;
 }
-
 
 .linear__top {
     display: flex;
@@ -21,6 +20,16 @@
     text-transform: uppercase;
     fill: @darkGreyColor;
     line-height: .7em;
+    font-family: @mainFont;
+}
+.linear__tooltipValue {
+    font-size: 1.1em;
+    fill: @darkGreyColor;
+    font-family: @mainFont;
+}
+.linear__tooltipDate {
+    font-size: .7em;
+    fill: @darkGreyColor;
     font-family: @mainFont;
 }
 
@@ -49,6 +58,8 @@
 
 .linear__tooltip {
     display: none;
+}
+.linear__tooltipBody {
     stroke-width: 1;
     stroke: @lightGreyColor;
     stroke-linejoin: round;

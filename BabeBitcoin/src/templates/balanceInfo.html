@@ -2,6 +2,7 @@
 
 
 {% import "partials/buttons.html" as button %}
+{% import "partials/spin.html" as spinner %}
 
 
 {% block baseBlockHeader %}
@@ -17,20 +18,38 @@
 {% block baseBlockContent %}
 
 <div class="balanceInfo__content">
-    <div>{{Balance.Value}} {{Balance.Currency}}</div>
-    <div>
+    <div class="balanceInfo__info">
+        <div class="balanceInfo__balance">
 
-        {% if Balance.StatusMessage == '' %}
-        {% else %}
-        {{Balance.StatusMessage}}
-        {% endif %}
+            <div class="balanceInfo__balanceValue">
+                {{Balance.Value}}
+            </div>
+            &nbsp;
+            <div class="balanceInfo__balanceCurrency">
+                {{Balance.Currency}}
+            </div>
+        </div>
+        <div class="balanceInfo__status">
 
-    </div>
-    <div>
-        {% if Balance.Pending %}
-        Pending: {{Balance.Pending.Value}} {{Balance.Pending.Currency}}
-        {% else %}
-        {% endif %}
+            {% if Balance.StatusMessage == '' %}
+            {% else %}
+            {{spinner.spin()}}&nbsp;{{Balance.StatusMessage}}
+            {% endif %}
+
+        </div>
+        <div class="balanceInfo__pending">
+            {% if Balance.Pending %}
+            <i class="fa fa-hourglass-start"></i>
+            &nbsp;Pending:
+            <div class="balanceInfo__pendingValue">
+                &nbsp;{{Balance.Pending.Value}}
+                <div class="balanceInfo__pendingCurrency">
+                    &nbsp;{{Balance.Pending.Currency}}
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+        </div>
     </div>
     <div class="balanceInfo__button">
         {{ button.primary('Top Up', 'console.log("Top Up!");') }}

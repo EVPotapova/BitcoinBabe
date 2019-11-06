@@ -8,19 +8,21 @@
 {% set tooltipH = 45 %}
 {% set dotR = 5 %}
 {% set arrow = 10 %}
+{% set paddingX = 8 %}
+{% set paddingY = 10 %}
 
     <svg height="{{height}}" width="{{width}}" class="linear__svg">
         <defs>
             <g>
                 <linearGradient id="grid_gradient_transparent" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" class="linear__gridLine linear__gridLine_start_transparent" />
-                    <stop offset="20%" class="linear__gridLine linear__gridLine_start_transparent" />
-                    <stop offset="100%" class="linear__gridLine" />
+                    <stop offset="0%" class="linear__modules linear__modules_start_transparent" />
+                    <stop offset="40%" class="linear__modules linear__modules_start_transparent" />
+                    <stop offset="100%" class="linear__modules" />
                 </linearGradient>
                 <linearGradient id="grid_gradient_white" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" class="linear__gridLine linear__gridLine_start_white" />
-                    <stop offset="20%" class="linear__gridLine linear__gridLine_start_white" />
-                    <stop offset="100%" class="linear__gridLine" />
+                    <stop offset="0%" class="linear__modules linear__modules_start_white" />
+                    <stop offset="20%" class="linear__modules linear__modules_start_white" />
+                    <stop offset="100%" class="linear__modules" />
                 </linearGradient>
             </g>
         </defs>
@@ -46,10 +48,13 @@
             <polygon points="{{x1}} {{height}}, {{x2}} {{height}}, {{x2}} {{y2}}, {{x1}} {{y1}}" class="linear__background" />
 
             <!--gridlines-->
-            <!--<polygon points="{{mid}} {{height}}, {{mid+1}} {{height}}, {{mid+1}} 0, {{mid}} 0" fill="url(#grid_gradient)" />
-            <polygon points="{{x2}} {{height}}, {{x2+1}} {{height}}, {{x2+1}} 0, {{x2}} 0" fill="url(#grid_gradient)" />
-            <polygon points="{{(mid + x1) / 2}} {{height}}, {{(mid + x1) / 2+1}} {{height}}, {{(mid + x1) / 2+1}} 0, {{(mid + x1) / 2}} 0" fill="url(#grid_gradient_transparent)" />
-            <polygon points="{{(mid + x2) / 2}} {{height}}, {{(mid + x2) / 2+1}} {{height}}, {{(mid + x2) / 2+1}} 0, {{(mid + x2) / 2}} 0" fill="url(#grid_gradient_transparent)" />-->
+            <line x1="{{mid}}" y1="{{0}}" x2="{{mid+1}}" y2="{{height}}" stroke="url(#grid_gradient_transparent)" stroke-width="1"></line>
+            <line x1="{{x2-1}}" y1="{{0}}" x2="{{x2}}" y2="{{height}}" stroke="url(#grid_gradient_transparent)" stroke-width="1"></line>
+            <line x1="{{(mid + x1) / 2}}" y1="{{0}}" x2="{{(mid + x1) / 2+1}}" y2="{{height}}" stroke="url(#grid_gradient_transparent)" stroke-width="1"></line>
+            <line x1="{{(mid + x2) / 2}}" y1="{{0}}" x2="{{(mid + x2) / 2+1}}" y2="{{height}}" stroke="url(#grid_gradient_transparent)" stroke-width="1"></line>  
+
+        
+
         
         {% endfor %}
 
@@ -117,9 +122,17 @@
 
             <!--tooltips-->
             {%if loop.last%}
-                <polygon points="{{x1-dotR-arrow}} {{y1+tooltipH/2}},{{x1-dotR-arrow}} {{y1-tooltipH/2}},{{x1-tooltipW-dotR-arrow}} {{y1-tooltipH/2}},{{x1-tooltipW-dotR-arrow}} {{y1+tooltipH/2}}" class="linear__tooltip" fill="url(#grid_gradient_white)"></polygon>
+                <g class="linear__tooltip">                    
+                    <polygon points="{{x1-dotR-arrow}} {{y1+tooltipH/2}},{{x1-dotR-arrow}} {{y1-tooltipH/2}},{{x1-tooltipW-dotR-arrow}} {{y1-tooltipH/2}},{{x1-tooltipW-dotR-arrow}} {{y1+tooltipH/2}}" class="linear__tooltipBody" fill="url(#grid_gradient_white)"></polygon>
+                    <text x="{{x1-tooltipW-dotR-arrow+paddingX}}" y="{{y1-tooltipH/2+20+1.5*paddingY}}" class="linear__tooltipDate">{{point.Month}} {{point.Day}}, {{point.Year}}</text>
+                    <text x="{{x1-tooltipW-dotR-arrow+paddingX}}" y="{{y1-tooltipH/2+10+paddingY}}" class="linear__tooltipValue">{{point.Value}}</text>
+                </g>
             {%else%}
-                <polygon points="{{x1+dotR+arrow}} {{y1+tooltipH/2}},{{x1+dotR+arrow}} {{y1-tooltipH/2}},{{x1+tooltipW+dotR+arrow}} {{y1-tooltipH/2}},{{x1+tooltipW+dotR+arrow}} {{y1+tooltipH/2}}" class="linear__tooltip" fill="url(#grid_gradient_white)"></polygon>
+                <g class="linear__tooltip">
+                    <polygon points="{{x1+dotR+arrow}} {{y1+tooltipH/2}},{{x1+dotR+arrow}} {{y1-tooltipH/2}},{{x1+tooltipW+dotR+arrow}} {{y1-tooltipH/2}},{{x1+tooltipW+dotR+arrow}} {{y1+tooltipH/2}}" class="linear__tooltipBody" fill="url(#grid_gradient_white)"></polygon>
+                    <text x="{{x1+dotR+arrow+paddingX}}" y="{{y1-tooltipH/2+20+1.5*paddingY}}" class="linear__tooltipDate">{{point.Month}} {{point.Day}}, {{point.Year}}</text>
+                    <text x="{{x1+dotR+arrow+paddingX}}" y="{{y1-tooltipH/2+10+paddingY}}" class="linear__tooltipValue">{{point.Value}}</text>
+                </g>
             {%endif%}
 
 

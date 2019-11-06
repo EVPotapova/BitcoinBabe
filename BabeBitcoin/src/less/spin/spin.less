@@ -1,0 +1,50 @@
+
+
+.dots-circle-spinner {
+    .generate-dots-spinner(8, 1.5, 1s);
+}
+
+.generate-dots-spinner (@n, @radius, @duration) {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    line-height: 1;
+    vertical-align: middle;
+    border-radius: 1em;
+    transition: all 150ms linear 0s;
+    transform: scale(0);
+    opacity: 0;
+    .generate-dots-circle(@n, @radius);
+
+    &.loading {
+        transform: scale(.25);
+        opacity: 1;
+        animation: @duration linear 150ms normal infinite forwards running dots-circle-rotation;
+    }
+
+    @keyframes dots-circle-rotation {
+        .generate-dots-circle-keyframes(@n, @radius);
+    }
+}
+
+.generate-dots-circle (@n, @radius, @offset: 0, @i: 1) when (@i <= @n) {
+    .generate-dots-circle(@n, @radius, @offset, @i + 1);
+
+    @angle: @i * 360 / @n * -1deg;
+    @x: @radius * cos(@angle) * 1em;
+    @y: @radius * sin(@angle) * 1em;
+    @blur: 0;
+    @multiplier: mod(@i + (@offset * @n), @n) / @n / 2 * -1em;
+
+    box-shadow +: @x @y @blur @multiplier;
+}
+
+.generate-dots-circle-keyframes (@n, @radius, @i: 0) when (@i <= @n) {
+    .generate-dots-circle-keyframes(@n, @radius, @i + 1);
+
+    @percentage: percentage(@i / @n);
+
+    @{percentage} {
+        .generate-dots-circle(@n, @radius, @i / @n);
+    }
+}
