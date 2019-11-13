@@ -72,6 +72,9 @@
     <Content Include="src\less\buttons\_type\button_type.less">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\less\buyBitcoinContentArea\buyBitcoinContentArea.less">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\less\feedItem.less">
       <SubType>Code</SubType>
     </Content>
@@ -109,6 +112,9 @@
     <Content Include="src\less\spin\spin.less">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\less\tabs\tabs.less">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\less\transactionHistory\transactionHistory.less">
       <SubType>Code</SubType>
     </Content>
@@ -140,6 +146,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\partials\spin.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\partials\tabs.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\templates\balanceInfo.html">
@@ -192,6 +201,7 @@
     <Folder Include="src\less\" />
     <Folder Include="src\less\body\" />
     <Folder Include="src\less\buttons\_type\" />
+    <Folder Include="src\less\buyBitcoinContentArea\_active\" />
     <Folder Include="src\less\footer\" />
     <Folder Include="src\less\footer\_font\" />
     <Folder Include="src\less\header\" />
@@ -212,6 +222,8 @@
     <Folder Include="src\less\linear\" />
     <Folder Include="src\less\bitcoinSellPrice\" />
     <Folder Include="src\less\bitcoinPrice\" />
+    <Folder Include="src\less\buyBitcoinContentArea\" />
+    <Folder Include="src\less\tabs\" />
     <Folder Include="src\less\spin\" />
     <Folder Include="src\less\transactionHistory\" />
     <Folder Include="src\less\transactionHistory\_width\" />

@@ -1,0 +1,32 @@
+﻿{% macro tabs(names=['Tab 1', 'Tab 2']) %}
+
+
+<input id="tab_0" type="radio" name="pct" class="tabs__radiobtn" />
+{% for item in names %}
+    {%if loop.first%}
+<input id="tab_{{loop.index}}" checked="checked" type="radio" name="pct" class="tabs__radiobtn" />
+    {%else%}
+<input id="tab_{{loop.index}}" type="radio" name="pct" class="tabs__radiobtn" />
+    {% endif %}
+{% endfor %}
+
+<nav>
+    <ul class="tabs_navigation">
+        <!--INFO TAB-->
+        <li class="tab_0">
+            <!--comment-alt-exclamation only in pro-->
+            <label for="tab_0">
+                <i class="fa fa-question-circle"></i>
+            </label>
+        </li>
+        <!--DYNAMIC TABS-->
+        {% for item in names %}
+        <li class="tab_{{loop.index}}">
+            <label for="tab_{{loop.index}}">{{item}}</label>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
+
+
+{% endmacro %}

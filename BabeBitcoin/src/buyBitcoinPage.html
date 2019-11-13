@@ -1,6 +1,7 @@
 ﻿{% extends "./_layout.html"  %}
 
 
+{% import "partials/tabs.html" as tabs %}
 
 {% block topArea %}
 <!--no top area for this page-->
@@ -11,5 +12,27 @@
     {% endblock %}
 
 {% block contentArea %}
-<p>There will be trade tabs</p>
-    {% endblock %}
+<div class="buyBitcoinContentArea">
+    <div class="buyBitcoinContentArea__tabs">
+
+        {{ tabs.tabs(['Funding', 'Trade', 'Account Balance']) }}
+        <section class="tabs__contentSection">
+            
+            <!--INFO TAB-->
+            <div class="tabs__tab tabs__tab0">
+                Info
+            </div>
+            <!--OTHER NEEDED TABS-->
+            <div class="tabs__tab tabs__tab1">
+                Content 1
+            </div>
+            <div class="tabs__tab tabs__tab2">
+                Content 2
+            </div>
+            <div class="tabs__tab tabs__tab3">
+                Content 3
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
