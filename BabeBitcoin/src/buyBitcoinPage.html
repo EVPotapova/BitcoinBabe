@@ -16,21 +16,21 @@
     <div class="buyBitcoinContentArea__tabs">
 
         {{ tabs.tabs(['Funding', 'Trade', 'Account Balance']) }}
-        <section class="tabs__contentSection">
+        <section class="tabs__contentSection buyBitcoinContentArea__body">
             
             <!--INFO TAB-->
             <div class="tabs__tab tabs__tab0">
-                Info
+                {%include "templates/buyHelp.html"%}
             </div>
             <!--OTHER NEEDED TABS-->
             <div class="tabs__tab tabs__tab1">
-                Content 1
+                {%include "templates/bitcoinFunding.html"%}
             </div>
             <div class="tabs__tab tabs__tab2">
-                Content 2
+                {%include "templates/bitcoinTrade.html"%}
             </div>
             <div class="tabs__tab tabs__tab3">
-                Content 3
+                {%include "templates/balanceInfo.html"%}
             </div>
         </section>
     </div>

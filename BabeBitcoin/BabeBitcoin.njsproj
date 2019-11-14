@@ -63,6 +63,9 @@
     <Content Include="src\less\baseBlock\baseBlock.less">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\less\bitcoinFunding\bitcoinFunding.less">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\less\bitcoinPrice\bitcoinPrice.less">
       <SubType>Code</SubType>
     </Content>
@@ -73,6 +76,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\buyBitcoinContentArea\buyBitcoinContentArea.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\buyHelp\buyHelp.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\feedItem.less">
@@ -154,10 +160,19 @@
     <Content Include="src\templates\balanceInfo.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\templates\bitcoinFunding.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\templates\bitcoinPrice.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\templates\bitcoinSellingPrice.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\templates\bitcoinTrade.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\templates\buyHelp.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\templates\mediaFeed.html">
@@ -223,6 +238,8 @@
     <Folder Include="src\less\bitcoinSellPrice\" />
     <Folder Include="src\less\bitcoinPrice\" />
     <Folder Include="src\less\buyBitcoinContentArea\" />
+    <Folder Include="src\less\buyHelp\" />
+    <Folder Include="src\less\bitcoinFunding\" />
     <Folder Include="src\less\tabs\" />
     <Folder Include="src\less\spin\" />
     <Folder Include="src\less\transactionHistory\" />
