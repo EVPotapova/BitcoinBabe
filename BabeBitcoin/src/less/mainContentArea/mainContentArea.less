@@ -3,40 +3,51 @@
     flex-direction: column;
     margin-top: 25px;
     align-items: stretch;
+    height: 1010px;
+    justify-content: space-between;
 }
 
 .mainContentArea__firstRow {
     display: flex;
+    justify-content: space-between;
     height: 325px;
 }
 
 .mainContentArea__accountBalance {
-    flex-grow: 1;
+    flex-basis: 355px;
+    flex-grow: 0;
 }
 
 .mainContentArea__transactionHistory {
-    width: 795px;
+    flex-basis: 790px;
+    flex-grow: 0;
 }
 
 .mainContentArea__secondRow {
     display: flex;
-    height: 650px;
+    justify-content: space-between;
+    height: 665px;
 }
 
 .mainContentArea__prices {
     display: flex;
     flex-direction: column;
-    width: 570px;
+    justify-content: space-between;
+    flex-basis: 575px;
+    flex-grow: 0;
 }
 
 .mainContentArea__bitcoinBuyPrice {
-    height: 330px;
+    flex-basis: 320px;
+    flex-grow: 0;
 }
 
 .mainContentArea__bitcoinSellPrice {
-    height: 330px;
+    flex-basis: 320px;
+    flex-grow: 0;
 }
 
 .mainContentArea__feed {
-    width: 570px;
+    flex-basis: 575px;
+    flex-grow: 0;
 }

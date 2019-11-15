@@ -11,23 +11,23 @@
 {% block contentArea %}
 <div class="mainContentArea">
     <div class="mainContentArea__firstRow">
-        <div class="mainContentArea__accountBalance mainContentArea_border mainContentArea_margin_right">
+        <div class="mainContentArea__accountBalance mainContentArea_border">
             {%include "templates/balanceInfo.html"%}
         </div>
-        <div class="mainContentArea__transactionHistory mainContentArea_border mainContentArea_margin_left">
+        <div class="mainContentArea__transactionHistory mainContentArea_border">
             {%include "templates/transactionHistory.html"%}
         </div>
     </div>
     <div class="mainContentArea__secondRow">
         <div class="mainContentArea__prices">
-            <div class="mainContentArea__bitcoinBuyPrice mainContentArea_border mainContentArea_margin_top mainContentArea_margin_right">
+            <div class="mainContentArea__bitcoinBuyPrice mainContentArea_border">
                 {%include "templates/bitcoinPrice.html"%}
             </div>
-            <div class="mainContentArea__bitcoinSellPrice mainContentArea_border mainContentArea_margin_top mainContentArea_margin_right">
+            <div class="mainContentArea__bitcoinSellPrice mainContentArea_border">
                 {%include "templates/bitcoinSellingPrice.html"%}
             </div>
         </div>
-        <div class="mainContentArea__feed mainContentArea_border mainContentArea_margin_top mainContentArea_margin_left">
+        <div class="mainContentArea__feed mainContentArea_border">
             {%include "templates/mediaFeed.html"%}
         </div>
     </div>
