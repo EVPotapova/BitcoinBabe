@@ -1,3 +1,7 @@
+
+.step__content {
+    display: none;
+}
 .bitcoinFunding__content {
     display: flex;
     align-items: stretch;
@@ -14,9 +18,12 @@
 }
 
 .bitcoinFunding__steps {
-    width: 350px;
+    width: 320px;
     border: 1px solid #e2e2e2;
     margin-right: 20px;
+    display: flex;
+    flex-direction:column;
+    padding: 0 0 0 30px;
 }
 
 .bitcoinFunding__info {
@@ -28,4 +35,73 @@
     flex-direction: column;
     align-items: stretch;
     height: 100%;
+}
+
+.bitcoinFunding__rbtStep{
+    display: none;
+}
+
+.make-steps-content(@i: 9) when (@i > -1) {
+
+    #step_@{i}:checked ~ .bitcoinFunding__info .step__@{i} {
+        display: flex;
+    }
+
+    .make-steps-content(@i - 1);
+}
+
+.make-steps-content();
+
+.bitcoinFunding__stepMsg {
+    color: #848383;
+    font-size: 14px;
+}
+.bitcoinFunding__stepHeader {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.bitcoinFunding__step {
+    display: flex;
+    align-items: center;
+    line-height: 1.3em;
+}
+
+.bitcoinFunding__stepImg{
+    width: 40px;
+    height: 100px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bitcoinFunding__stepBody{
+    margin-left: 30px;
+}
+
+@square: 35px ;
+.bitcoinFunding__stepSquare {
+    width: @square;
+    height: calc(@square - 7px);
+    border-radius: .2em;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,.1);
+    font-family: @secondaryFont;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.bitcoinFunding__stepMsg{
+    display: flex;
+}
+
+.bitcoinFunding__stepMsgResult{
+    text-transform: lowercase;
+}
+
+.bitcoinFunding__stepLine {
+    height: calc((100% - @square) / 2);
+    width: 10px;
+    box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,.1);
 }

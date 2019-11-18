@@ -1,0 +1,36 @@
+{
+  "Funding": {
+    "Steps": [
+      {
+        "ID": 1,
+        "Header": "Select payment type",
+        "Status": "completed"
+      },
+      {
+        "ID": 2,
+        "Header": "Specify amount",
+        "Status": "active"
+      },
+      {
+        "ID": 3,
+        "Header": "Payment",
+        "Status": "inactive"
+      },
+      {
+        "ID": 4,
+        "Header": "Done!",
+        "Status": "inactive"
+      }
+    ],
+    "PaymentType": {
+      "ID": 1,
+      "Header": "Bank Transfer"
+    },
+    "Amount": 280,
+    "Limit": 500,
+    "Currency": "USD",
+    "NotIllegalPurposes": false,
+    "MyOwnFunds": false,
+    "Without?oercion": false
+  }
+}

@@ -46,6 +46,9 @@
     <Content Include="src\data\feedItems.json">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\data\funding.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\data\messages.json">
       <SubType>Code</SubType>
     </Content>
@@ -64,6 +67,12 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\bitcoinFunding\bitcoinFunding.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\bitcoinFunding\_position\bitcoinFunding__stepLine_position.less">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\less\bitcoinFunding\_status\bitcoinFunding__step_status.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\bitcoinPrice\bitcoinPrice.less">
@@ -214,6 +223,8 @@
     <Folder Include="src\images\avatars\" />
     <Folder Include="src\js\" />
     <Folder Include="src\less\" />
+    <Folder Include="src\less\bitcoinFunding\_position\" />
+    <Folder Include="src\less\bitcoinFunding\_status\" />
     <Folder Include="src\less\body\" />
     <Folder Include="src\less\buttons\_type\" />
     <Folder Include="src\less\buyBitcoinContentArea\_active\" />
