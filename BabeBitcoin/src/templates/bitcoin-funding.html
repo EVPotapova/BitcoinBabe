@@ -1,0 +1,119 @@
+﻿<div class="bitcoin-funding">
+    <div class="bitcoin-funding__header">
+        <i class="icon icon-bank bitcoin-funding__icon"></i> Payment by Bank Transfer
+    </div>
+
+
+    <div class="bitcoin-funding__content">
+
+
+        {% for item in Funding.Steps %}
+            {%if item.Status=='active'%}
+                <input type="radio" checked="checked" id="step_{{item.ID}}" name="steprb" class="bitcoin-funding__rbt-step" />
+            {%elif item.Status=='completed'%}
+                <input type="radio" id="step_{{item.ID}}" name="steprb" class="bitcoin-funding__rbt-step" disabled />
+            {%else%}
+                <input type="radio" id="step_{{item.ID}}" name="steprb" class="bitcoin-funding__rbt-step" disabled />
+            {% endif %}
+
+        {% endfor %}
+
+        <div class="bitcoin-funding__steps">
+
+
+            {% for item in Funding.Steps %}
+                {%if item.Status=='completed'%}
+
+                    <div class="bitcoin-funding__step ">
+                        <div class="bitcoin-funding__step-img">
+                            <!--line-->
+                            {% if loop.first %}
+                                <div class="bitcoin-funding__step-line bitcoin-funding__step-line_position_first bitcoin-funding__step_status_completed"></div>
+                            {% else %}
+                                <div class="bitcoin-funding__step-line   bitcoin-funding__step_status_completed"></div>
+                            {% endif %}
+                            <!--body-->
+                            <div class="bitcoin-funding__step-square bitcoin-funding__step_status_completed">
+                                <i class="icon icon-check"></i>
+                            </div>
+                            <!--line-->
+                            {% if loop.last %}
+                                <div class="bitcoin-funding__step-line bitcoin-funding__step-line_position_last bitcoin-funding__step_status_completed"></div>
+                            {% else %}
+                                <div class="bitcoin-funding__step-line   bitcoin-funding__step_status_completed"></div>
+                            {% endif %}
+                        </div>
+                        <div class="bitcoin-funding__step-body bitcoin-funding__step-body_status_completed">
+                            <div class="bitcoin-funding__step-header">{{item.Header}}</div>
+                            <div class="bitcoin-funding__step-msg">You choose&nbsp;<div class="bitcoin-funding__step-msg-result">{{Funding.PaymentType.Header}}</div></div>
+                        </div>
+                    </div>
+
+                {%elif item.Status=='active'%}
+                    <div class="bitcoin-funding__step ">
+                        <div class="bitcoin-funding__step-img">
+                            <!--line-->
+                            {% if loop.first %}
+                                <div class="bitcoin-funding__step-line bitcoin-funding__step-line_position_first bitcoin-funding__step_status_active"></div>
+                            {% else %}
+                                <div class="bitcoin-funding__step-line   bitcoin-funding__step_status_active"></div>
+                            {% endif %}
+                            <!--body-->
+                            <div class="bitcoin-funding__step-square bitcoin-funding__step_status_active">{{item.ID}}</div>
+                            <!--line-->
+                            {% if loop.last %}
+                                <div class="bitcoin-funding__step-line bitcoin-funding__step-line_position_last bitcoin-funding__step_status_active"></div>
+                            {% else %}
+                                <div class="bitcoin-funding__step-line   bitcoin-funding__step_status_active"></div>
+                            {% endif %}
+                        </div>
+                        <div class="bitcoin-funding__step-body bitcoin-funding__step-body_status_active">
+                            <div class="bitcoin-funding__step-header">{{item.Header}}</div>
+                            <div class="bitcoin-funding__step-msg"></div>
+                        </div>
+                    </div>
+                {%else%}
+                    <div class="bitcoin-funding__step ">
+                        <div class="bitcoin-funding__step-img">
+                            <!--line-->
+                            {% if loop.first %}
+                                <div class="bitcoin-funding__step-line bitcoin-funding__step-line_position_first bitcoin-funding__step_status_inactive"></div>
+                            {% else %}
+                                <div class="bitcoin-funding__step-line   bitcoin-funding__step_status_inactive"></div>
+                            {% endif %}
+                            <!--body-->
+                            <div class="bitcoin-funding__step-square bitcoin-funding__step_status_inactive">{{item.ID}}</div>
+                            <!--line-->
+                            {% if loop.last %}
+                                <div class="bitcoin-funding__step-line bitcoin-funding__step-line_position_last bitcoin-funding__step_status_inactive"></div>
+                            {% else %}
+                                <div class="bitcoin-funding__step-line   bitcoin-funding__step_status_inactive"></div>
+                            {% endif %}
+                        </div>
+                        <div class="bitcoin-funding__step-body bitcoin-funding__step-body_status_inactive">
+                            <div class="bitcoin-funding__step-header">{{item.Header}}</div>
+                            <div class="bitcoin-funding__step-msg"></div>
+                        </div>
+                    </div>
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
+        <div class="bitcoin-funding__info">
+            <div class="step__1 step__content">
+                Step1
+            </div>
+            <div class="step__2 step__content">
+                Step2
+            </div>
+            <div class="step__3 step__content">
+                Step3
+            </div>
+            <div class="step__4 step__content">
+                Step4
+            </div>
+        </div>
+
+    </div>
+</div>

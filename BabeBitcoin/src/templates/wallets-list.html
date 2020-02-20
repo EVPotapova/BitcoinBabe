@@ -1,0 +1,36 @@
+﻿<div class="wallets-list">
+
+    {% for item in Wallets %}
+    <div class="wallets-list__item wallets-list__item_border_right">
+        <div class="wallets-list__title"><i class="icon icon-wallet"></i> {{ item.title }}</div>
+        <div class="wallets-list__state">
+            <div class="wallets-list__value">
+                {{ item.value }}
+            </div>
+            <div class="wallets-list__currency">
+                BTC
+            </div>
+        </div>
+        <div class="wallets-list__lastChange">
+
+            {% if item.lastOperation.isNegative %}
+
+            <div class="wallets-list__last-change-value wallets-list__last-change-value_negative">
+                {{ item.lastOperation.value }} <i class="icon icon-caret-down"></i>
+            </div>
+            {% else %}
+
+            <div class="wallets-list__last-change-value">
+                {{ item.lastOperation.value }} <i class="icon icon-caret-up"></i>
+            </div>
+            {% endif %}
+
+
+            <div class="wallets-list__last-change-period">
+                {{ item.lastOperation.period }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="wallets-list__add_new"><a href="#"><i class="icon icon-plus-circle"></i> Add Wallets</a></div>
+</div>

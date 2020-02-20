@@ -1,0 +1,31 @@
+.button {
+    width: 100%;
+    border-radius: 3px;
+    font-family: @mainFont;
+    font-weight: 600;
+    font-size: 16px;
+
+
+    &_type_primary {
+        height: 50px;
+        background-color: @primaryBgColor;
+        color: @whiteColor;
+        border: 1px solid @primaryBorderColor;
+    }
+
+    &_type_secondary {
+        height: 40px;
+        background-color: @whiteColor;
+        color: @primaryBgColor;
+        border: 1px solid @primaryBgColor;
+    }
+
+    &_type_primary:hover {
+        background-color: darken(@primaryBgColor,10%);
+    }
+
+
+    &_type_secondary:hover {
+        background-color: darken(@whiteColor,10%);
+    }
+}

@@ -1,0 +1,59 @@
+﻿{% extends "partials/base-block.html"  %}
+
+
+{% import "partials/buttons.html" as button %}
+{% import "partials/spin.html" as spinner %}
+
+
+{% block baseBlockHeader %}
+
+<div >
+    Account Balance
+</div>
+
+{% endblock %}
+
+
+
+{% block baseBlockContent %}
+
+<div class="balance-info__content">
+    <div class="balance-info__info">
+        <div class="balance-info__balance">
+
+            <div class="balance-info__balance-value">
+                {{Balance.Value}}
+            </div>
+            &nbsp;
+            <div class="balance-info__balance-currency">
+                {{Balance.Currency}}
+            </div>
+        </div>
+        <div class="balance-info__status">
+
+            {% if Balance.StatusMessage == '' %}
+            {% else %}
+            {{spinner.spin()}}&nbsp;{{Balance.StatusMessage}}
+            {% endif %}
+
+        </div>
+        <div class="balance-info__pending">
+            {% if Balance.Pending %}
+            <i class="icon icon-hourglass-start"></i>
+            &nbsp;Pending:
+            <div class="balance-info__pending-value">
+                &nbsp;{{Balance.Pending.Value}}
+                <div class="balance-info__pending-currency">
+                    &nbsp;{{Balance.Pending.Currency}}
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="balance-info__button">
+        {{ button.primary('Top Up', 'console.log("Top Up!");') }}
+    </div>
+</div>
+
+{% endblock %}

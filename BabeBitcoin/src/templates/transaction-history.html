@@ -1,0 +1,71 @@
+﻿{% extends "partials/base-block.html" %}
+
+{% import "partials/buttons.html" as button %}
+
+{% block baseBlockHeader %}
+<div>
+    Transaction History
+</div>
+<div>
+
+    {{ button.secondary('View More') }}
+</div>
+{% endblock %}
+
+{% block baseBlockContent %}
+
+<div class="transaction-history__table">
+
+    <div class="transaction-history__headers">
+        <div class="transaction-history__cell transaction-history__cell_width_150">
+            Date&nbsp;
+            <a href="#"> <i class="icon icon-sort-asc transaction-history__sort-icon"></i></a>
+        </div>
+        <div class="transaction-history__cell transaction-history__cell_width_280">
+            Type of transaction&nbsp;
+            <a href="#"> <i class="icon icon-sort-asc transaction-history__sort-icon"></i></a>
+        </div>
+        <div class="transaction-history__cell transaction-history__cell_width_100">
+            Amount&nbsp;
+            <a href="#"> <i class="icon icon-sort-asc transaction-history__sort-icon"></i></a>
+        </div>
+        <div class="transaction-history__cell">
+            Status&nbsp;
+            <a href="#"> <i class="icon icon-sort-asc transaction-history__sort-icon"></i></a>
+        </div>
+    </div>
+
+    <div class="transaction-history__body">
+
+        {% for item in Transactions %}
+        <div class="transaction-history__row">
+            <div class="transaction-history__cell transaction-history__cell_width_150">
+                {{item.Date}}
+                <div class="transaction-history__time">
+                    &nbsp;{{item.Time}}
+                </div>
+            </div>
+
+            <div class="transaction-history__cell transaction-history__cell_width_280">
+                {% if item.Source %}
+                {{item.Type}} <div class="transaction-history__source">&nbsp;- {{item.Source}}</div>
+                {% elif item.Value %}
+                {{item.Type}}: <div class="transaction-history__value">&nbsp;{{item.Value}}</div> <div class="transaction-history__value-currency">&nbsp;BTC</div>
+                {% endif %}
+            </div>
+
+            <div class="transaction-history__cell transaction-history__cell_width_100">
+
+                {% if item.Amount>0 %}
+                <i class="icon icon-plus-circle transaction-history__amount"></i>&nbsp;{{item.Amount}} {{item.AmountCurrency}}
+                {% else %}
+                <i class="icon icon-minus-circle transaction-history__amount_negative"></i>&nbsp;{{item.Amount * -1}} {{item.AmountCurrency}}
+                {% endif %}
+            </div>
+
+            <div class="transaction-history__cell">{{item.Status}}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

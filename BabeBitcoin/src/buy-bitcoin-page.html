@@ -1,0 +1,38 @@
+﻿{% extends "./_layout.html"  %}
+
+
+{% import "partials/tabs.html" as tabs %}
+
+{% block topArea %}
+<!--no top area for this page-->
+    {% endblock %}
+
+    {% block messageArea %}
+        {%include "templates/messages.html"%}
+    {% endblock %}
+
+{% block contentArea %}
+<div class="buy-bitcoin-content-area">
+    <div class="buy-bitcoin-content-area__tabs">
+
+        {{ tabs.tabs(['Funding', 'Trade', 'Account Balance']) }}
+        <section class="tabs__contentSection buy-bitcoin-content-area__body">
+            
+            <!--INFO TAB-->
+            <div class="tabs__tab tabs__tab0">
+                {%include "templates/buy-help.html"%}
+            </div>
+            <!--OTHER NEEDED TABS-->
+            <div class="tabs__tab tabs__tab1">
+                {%include "templates/bitcoin-funding.html"%}
+            </div>
+            <div class="tabs__tab tabs__tab2">
+                {%include "templates/bitcoin-trade.html"%}
+            </div>
+            <div class="tabs__tab tabs__tab3">
+                {%include "templates/balance-info.html"%}
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

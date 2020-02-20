@@ -1,0 +1,40 @@
+.feed-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid @lightGreyColor;
+    padding: 30px;
+    font-family: @mainFont;
+
+    & a {
+        color: @primaryBgColor;
+    }
+
+    & a:link {
+        text-decoration: none;
+    }
+
+    & a:visited {
+        text-decoration: none;
+    }
+
+    &__header {
+        display: flex;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        padding-left: 15px;
+        padding-top: 5px;
+    }
+
+    &__image {
+        border: 1px solid @lightGreyColor;
+        border-radius: 27px;
+    }
+
+    &__text {
+        margin-top: 20px;
+    }
+}

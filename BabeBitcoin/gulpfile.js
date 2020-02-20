@@ -76,7 +76,7 @@ function watch() {
     gulp.watch(path.watch.fonts, fonts_build);
     gulp.watch(path.watch.icons, sprite_build);
     gulp.watch(path.watch.svg, svg_build);
-};
+}
 
 
 
@@ -96,19 +96,19 @@ function style_build() {
         .pipe(group_media())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest(path.build.css));
-};
+}
 
 
 function js_build() {
     return gulp.src(path.src.js, { sourcemaps: true })
         .pipe(gulp.dest(path.build.js));
-};
+}
 
 function images_build() {
     return gulp.src(path.src.img)
         .pipe(gulp.dest(path.build.img))
         ;
-};
+}
 
 function svg_build() {
     return gulp.src(path.src.svg)
@@ -116,20 +116,15 @@ function svg_build() {
         .pipe(gulp.dest(path.build.img));
 }
 
-function fa_build() {
-    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
-        .pipe(gulp.dest(path.build.fonts));
-};
-
 function fonts_build() {
     return gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts));
-};
+}
 
 function favicon_build() {
     return gulp.src(path.src.favicon)
         .pipe(gulp.dest(path.build.favicon));
-};
+}
 
 // **************************************
 // *
@@ -139,7 +134,7 @@ function favicon_build() {
 
 function open_browser() {
     opn('http://' + server.host + ':' + server.port + '/');
-};
+}
 
 function run_webserver() {
     connect.server({
@@ -148,17 +143,17 @@ function run_webserver() {
         root: path.build.html,
         livereload: true
     });
-};
+}
 
 function delete_html() {
     return del(path.build.htmlFiles);
-};
+}
 
 function merge_json() {
     return gulp.src(path.watch.data)
         .pipe(mergeJSON({ fileName: 'data.json' }))
         .pipe(gulp.dest('cached/'));
-};
+}
 
 function prepair_html() {
     return gulp.src(path.src.html)
@@ -175,12 +170,12 @@ function prepair_html() {
         .pipe(rigger())
         .pipe(inlinesource({ compress: false }))
         .pipe(gulp.dest(path.build.html));
-};
+}
 
 function update_html() {
     return gulp.src('./src/**/*.*')
         .pipe(connect.reload());
-};
+}
 
 
 function sprite_build() {
@@ -193,11 +188,11 @@ function sprite_build() {
         retinaSrcFilter: path.src.retinaIcons
     }));
     return spriteData.pipe(gulp.dest(path.build.icons));
-};
+}
 
 function clean_build() {
     return del(path.build.html);
-};
+}
 
 // Default node.js require function caching data. This de-caching function for Data files
 function requireUncached($module) {
@@ -206,7 +201,7 @@ function requireUncached($module) {
 }
 
 var html_build = gulp.series(merge_json, delete_html, prepair_html, update_html);
-var open = gulp.series(clean_build, sprite_build, html_build, js_build, style_build, fa_build, fonts_build, images_build, favicon_build, gulp.parallel(run_webserver, open_browser, watch));
+var open = gulp.series(clean_build, sprite_build, html_build, js_build, style_build, fonts_build, images_build, favicon_build, gulp.parallel(run_webserver, open_browser, watch));
 
 exports.default = open;
 

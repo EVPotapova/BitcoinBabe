@@ -1,0 +1,70 @@
+.wallets-list {
+    font-family: @mainFont;
+    color: @darkGreyColor;
+    display: flex;
+    margin-top: 15px; //TODO: No margin here
+    height: 75px;
+    font-size: 14px;
+
+    &__item {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
+
+    &__add_new {
+        display: flex;
+        width: 250px;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    &__add_new a {
+        font-size: 22px;
+        color: @lightGreyColor;
+        text-decoration: none;
+    }
+
+    &__lastChange {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__state {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__value {
+        font-family: @secondaryFont;
+        font-size: 2em; /* 14x2 */
+        margin-right: 5px;
+    }
+
+    &__last-change-value {
+        font-family: @secondaryFont;
+        margin-right: 5px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__last-change-value .icon {
+        font-size: 10px;
+        margin-left: 3px;
+    }
+
+
+    .wallets-list a:link {
+        text-decoration: none;
+    }
+
+    .wallets-list a:visited {
+        text-decoration: none;
+    }
+
+    &__last-change-value {
+        color: @greenPositiveColor;
+    }
+}

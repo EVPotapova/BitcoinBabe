@@ -1,17 +1,30 @@
-
 @font-face {
-    font-family: 'Mina Regular';
-    font-weight: normal;
-    src: url("/webfonts/Mina-Regular.ttf") format("truetype");
+    font-family: 'Mina';
+    src: url('../webfonts/mina-normal.eot');
+    src: local('?'), 
+        url('../webfonts/mina-normal.eot') format('embedded-opentype'), 
+        url('../webfonts/mina-normal.woff2') format('woff2'), 
+        url('../webfonts/mina-normal.woff') format('woff'), 
+        url('../webfonts/mina-normal.ttf') format('truetype'), 
+        url('../webfonts/mina-normal.svg') format('svg');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'AvenirLTStd Light';
-    font-weight: lighter;
-    src: url("/webfonts/AvenirLTStd Light.otf") format('opentype');
+    src: url('../webfonts/AvenirLTStd-Light.eot');
+    src: local('?'), 
+        url('../webfonts/AvenirLTStd-Light.eot') format('embedded-opentype'),
+        url('../webfonts/AvenirLTStd-Light.woff2') format('woff2'), 
+        url('../webfonts/AvenirLTStd-Light.woff') format('woff'), 
+        url('../webfonts/AvenirLTStd-Light.ttf') format('truetype'), 
+        url('../webfonts/AvenirLTStd-Light.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
 }
 
-@mainFont: 'Mina Regular';
+@mainFont: 'Mina';
 @secondaryFont: 'AvenirLTStd Light';
 
 @primaryBgColor: #f5638c;
@@ -32,11 +45,11 @@
 @errorColor: #fff0f0;
 
 
-@positiveFontColor: #6dedb8;
+@positiveFontColor: #00ce87;
 @neutralFontColor: #ffca05;
 
 
-@greenPositiveColor: rgb(102,249,199);
+@greenPositiveColor: #00ce87;
 @redNegativeColor: rgb(255,166,166);
 
 
@@ -49,8 +62,3 @@ grey(2598) - 7b7b7d
 
 
 grey(updating) - b8b8b9*/
-@import "node_modules/@fortawesome/fontawesome-free/less/fontawesome.less";
-@import "node_modules/@fortawesome/fontawesome-free/less/regular.less";
-@import "node_modules/@fortawesome/fontawesome-free/less/solid.less";
-@import "node_modules/@fortawesome/fontawesome-free/less/brands.less";
-@import "node_modules/@fortawesome/fontawesome-free/less/v4-shims.less";

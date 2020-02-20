@@ -34,7 +34,7 @@
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\buyBitcoinPage.html">
+    <Content Include="src\buy-bitcoin-page.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\data\balance.json">
@@ -60,68 +60,53 @@
     </Content>
     <Content Include="src\data\wallets.json" />
     <Content Include="src\images\avatars\bitcoin_babe.svg" />
-    <Content Include="src\less\balanceInfo\balanceInfo.less">
+    <Content Include="src\less\balance-info\balance-info.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\baseBlock\baseBlock.less">
+    <Content Include="src\less\base-block\base-block.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\bitcoinFunding\bitcoinFunding.less">
+    <Content Include="src\less\bitcoin-funding\bitcoin-funding.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\bitcoinFunding\_position\bitcoinFunding__stepLine_position.less">
+    <Content Include="src\less\bitcoin-funding\_position\bitcoin-funding__step-line_position.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\bitcoinFunding\_status\bitcoinFunding__step_status.less">
+    <Content Include="src\less\bitcoin-funding\_status\bitcoin-funding__step_status.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\bitcoinPrice\bitcoinPrice.less">
+    <Content Include="src\less\bitcoin-price\bitcoin-price.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\bitcoinSellPrice\bitcoinSellPrice.less">
+    <Content Include="src\less\bitcoin-sell-price\bitcoin-sell-price.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\buttons\_type\button_type.less">
+    <Content Include="src\less\buy-bitcoin-content-area\buy-bitcoin-content-area.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\buyBitcoinContentArea\buyBitcoinContentArea.less">
+    <Content Include="src\less\buy-help\buy-help.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\buyHelp\buyHelp.less">
+    <Content Include="src\less\feed-item\feed-item.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\feedItem.less">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\less\footer\_font\footer_font.less">
+    <Content Include="src\less\icons.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\linear\linear.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\linear\_start\linear__gridLine_start.less" />
-    <Content Include="src\less\mainContentArea\mainContentArea.less">
+    <Content Include="src\less\linear\_start\linear__modules_start.less" />
+    <Content Include="src\less\main-content-area\main-content-area.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\mainContentArea\_border\mainContentArea_border.less">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\less\mainContentArea\_margin\mainContentArea_margin.less">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\less\mainMenu\_margin\mainMenu__menuItem-margin-top.less">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\less\mediaFeed\mediaFeed.less">
+    <Content Include="src\less\media-feed\media-feed.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\messages\messages.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\messages\_type\messages__item_type.less">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\less\buttons\button.less">
+    <Content Include="src\less\button\button.less">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\less\spin\spin.less">
@@ -130,31 +115,27 @@
     <Content Include="src\less\tabs\tabs.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\transactionHistory\transactionHistory.less">
+    <Content Include="src\less\transaction-history\transaction-history.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\transactionHistory\_negative\transactionHistory__amount_negative.less">
+    <Content Include="src\less\transaction-history\_negative\transaction-history__amount_negative.less" />
+    <Content Include="src\less\transaction-history\_width\transaction-history__cell_width.less" />
+    <Content Include="src\less\wallets-list\wallets-list.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\transactionHistory\_width\transactionHistory__cell_width.less">
+    <Content Include="src\less\wallets-list\_border\wallets-list__item_border.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\walletsList\walletsList.less">
+    <Content Include="src\less\wallets-list\_negative\wallets-list__lastChangeValue_negative.less">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\less\walletsList\_border\walletsList__item_border.less">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\less\walletsList\_negative\walletsList__lastChangeValue_negative.less">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\partials\baseBlock.html">
+    <Content Include="src\partials\base-block.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\partials\buttons.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\partials\feedItem.html">
+    <Content Include="src\partials\feed-item.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\partials\linear.html">
@@ -166,36 +147,48 @@
     <Content Include="src\partials\tabs.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\templates\balanceInfo.html">
+    <Content Include="src\templates\balance-info.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\templates\bitcoinFunding.html">
+    <Content Include="src\templates\bitcoin-funding.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\templates\bitcoinPrice.html">
+    <Content Include="src\templates\bitcoin-price.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\templates\bitcoinSellingPrice.html">
+    <Content Include="src\templates\bitcoin-selling-price.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\templates\bitcoinTrade.html">
+    <Content Include="src\templates\bitcoin-trade.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\templates\buyHelp.html">
+    <Content Include="src\templates\buy-help.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\templates\mediaFeed.html">
+    <Content Include="src\templates\media-feed.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\templates\messages.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\templates\transactionHistory.html">
+    <Content Include="src\templates\transaction-history.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\templates\walletsList.html" />
-    <Content Include="src\webfonts\AvenirLTStd Light.otf" />
-    <Content Include="src\webfonts\Mina-Regular.ttf" />
+    <Content Include="src\templates\wallets-list.html" />
+    <Content Include="src\webfonts\AvenirLTStd-Light.eot" />
+    <Content Include="src\webfonts\AvenirLTStd-Light.svg" />
+    <Content Include="src\webfonts\AvenirLTStd-Light.ttf" />
+    <Content Include="src\webfonts\AvenirLTStd-Light.woff" />
+    <Content Include="src\webfonts\AvenirLTStd-Light.woff2" />
+    <Content Include="src\webfonts\icomoon.eot" />
+    <Content Include="src\webfonts\icomoon.svg" />
+    <Content Include="src\webfonts\icomoon.ttf" />
+    <Content Include="src\webfonts\icomoon.woff" />
+    <Content Include="src\webfonts\mina-normal.eot" />
+    <Content Include="src\webfonts\mina-normal.svg" />
+    <Content Include="src\webfonts\mina-normal.ttf" />
+    <Content Include="src\webfonts\mina-normal.woff" />
+    <Content Include="src\webfonts\mina-normal.woff2" />
     <Content Include="src\templates\footer.html" />
     <Content Include="src\templates\header.html" />
     <Content Include="src\index.html" />
@@ -205,14 +198,8 @@
     <Content Include="src\less\header\header.less" />
     <Content Include="src\less\layout.less" />
     <Content Include="src\less\main.less" />
-    <Content Include="src\less\mainMenu\mainMenu.less" />
-    <Content Include="src\less\mainMenu\_border\mainMenu__menuItem_border.less">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\less\mainMenu\_font\mainMenu_font_primary.less">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="src\templates\mainMenu.html" />
+    <Content Include="src\less\main-menu\main-menu.less" />
+    <Content Include="src\templates\main-menu.html" />
     <Content Include="src\_layout.html" />
   </ItemGroup>
   <ItemGroup>
@@ -223,42 +210,34 @@
     <Folder Include="src\images\avatars\" />
     <Folder Include="src\js\" />
     <Folder Include="src\less\" />
-    <Folder Include="src\less\bitcoinFunding\_position\" />
-    <Folder Include="src\less\bitcoinFunding\_status\" />
+    <Folder Include="src\less\bitcoin-funding\_position\" />
+    <Folder Include="src\less\bitcoin-funding\_status\" />
     <Folder Include="src\less\body\" />
-    <Folder Include="src\less\buttons\_type\" />
-    <Folder Include="src\less\buyBitcoinContentArea\_active\" />
     <Folder Include="src\less\footer\" />
-    <Folder Include="src\less\footer\_font\" />
     <Folder Include="src\less\header\" />
     <Folder Include="src\less\linear\_start\" />
-    <Folder Include="src\less\mainContentArea\_margin\" />
-    <Folder Include="src\less\mainContentArea\_border\" />
-    <Folder Include="src\less\mainMenu\" />
-    <Folder Include="src\less\mainMenu\_margin\" />
-    <Folder Include="src\less\mainMenu\_border\" />
-    <Folder Include="src\less\mainMenu\_font\" />
+    <Folder Include="src\less\main-menu\" />
     <Folder Include="src\less\messages\" />
-    <Folder Include="src\less\messages\_type\" />
-    <Folder Include="src\less\mainContentArea\" />
-    <Folder Include="src\less\buttons\" />
-    <Folder Include="src\less\baseBlock\" />
-    <Folder Include="src\less\balanceInfo\" />
-    <Folder Include="src\less\mediaFeed\" />
+    <Folder Include="src\less\main-content-area\" />
+    <Folder Include="src\less\button\" />
+    <Folder Include="src\less\base-block\" />
+    <Folder Include="src\less\balance-info\" />
+    <Folder Include="src\less\media-feed\" />
     <Folder Include="src\less\linear\" />
-    <Folder Include="src\less\bitcoinSellPrice\" />
-    <Folder Include="src\less\bitcoinPrice\" />
-    <Folder Include="src\less\buyBitcoinContentArea\" />
-    <Folder Include="src\less\buyHelp\" />
-    <Folder Include="src\less\bitcoinFunding\" />
+    <Folder Include="src\less\bitcoin-sell-price\" />
+    <Folder Include="src\less\bitcoin-price\" />
+    <Folder Include="src\less\buy-bitcoin-content-area\" />
+    <Folder Include="src\less\buy-help\" />
+    <Folder Include="src\less\bitcoin-funding\" />
+    <Folder Include="src\less\feed-item\" />
     <Folder Include="src\less\tabs\" />
     <Folder Include="src\less\spin\" />
-    <Folder Include="src\less\transactionHistory\" />
-    <Folder Include="src\less\transactionHistory\_width\" />
-    <Folder Include="src\less\transactionHistory\_negative\" />
-    <Folder Include="src\less\walletsList\" />
-    <Folder Include="src\less\walletsList\_negative\" />
-    <Folder Include="src\less\walletsList\_border\" />
+    <Folder Include="src\less\transaction-history\" />
+    <Folder Include="src\less\transaction-history\_negative\" />
+    <Folder Include="src\less\transaction-history\_width\" />
+    <Folder Include="src\less\wallets-list\" />
+    <Folder Include="src\less\wallets-list\_negative\" />
+    <Folder Include="src\less\wallets-list\_border\" />
     <Folder Include="src\partials\" />
     <Folder Include="src\webfonts\" />
     <Folder Include="src\svg\" />

@@ -1,57 +1,61 @@
 /* Component Needs */
 
-.tabs__radiobtn {
-    display: none;
-}
+.tabs {
 
-.tabs__contentSection > .tabs__tab {
-    display: none;
-}
-
-.tabs_navigation li {
-    font-family: @mainFont;
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    background-color: #f2f2f2;
-    height: 100%;
-    align-items: center;
-    color: #9b9b9c;
-    border-bottom: 1px solid #e2e2e2;
-    border-top: 1px solid #e2e2e2;
-    border-right: 1px solid #e2e2e2;
-}
-
-.tabs_navigation {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    height: 85px;
-    margin: 0;
-    padding: 0;
-    /*border-left: 1px solid #e2e2e2;*/
-}
-
-.tabs_navigation li.tab_0 {
-    width: 105px;
-    flex-grow: 0;
-}
-.make-tabs-content(@i: 9) when (@i > -1) {
-
-    #tab_@{i}:checked ~ .tabs__contentSection .tabs__tab@{i} {
-        display: block;
+    &__radiobtn {
+        display: none;
     }
 
-    #tab_@{i}:checked ~ nav .tab_@{i} {
-        background-color: @whiteColor;
-        border-bottom: 1px solid @whiteColor;
+    &__contentSection > .tabs__tab {
+        display: none;
     }
 
-    .make-tabs-content(@i - 1);
-}
+    &_navigation .tabs_navigation-tab {
+        font-family: @mainFont;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        background-color: #f2f2f2;
+        height: 100%;
+        align-items: center;
+        color: #9b9b9c;
+        border-bottom: 1px solid #e2e2e2;
+        border-top: 1px solid #e2e2e2;
+        border-right: 1px solid #e2e2e2;
+    }
 
-.make-tabs-content();
+    &_navigation {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        height: 85px;
+        margin: 0;
+        padding: 0;
+        /*border-left: 1px solid #e2e2e2;*/
+    }
 
-.tabs__tab {
-    height: 100%;
+    &_navigation .tab_0 {
+        width: 105px;
+        flex-grow: 0;
+    }
+
+    .make-tabs-content(@i: 9) when (@i > -1) {
+
+        #tab_@{i}:checked ~ &__contentSection &__tab@{i} {
+            display: block;
+        }
+
+        #tab_@{i}:checked ~ nav .tab_@{i} {
+            background-color: @whiteColor;
+            border-bottom: 1px solid @whiteColor;
+        }
+
+        .make-tabs-content(@i - 1);
+    }
+
+    .make-tabs-content();
+
+    &__tab {
+        height: 100%;
+    }
 }

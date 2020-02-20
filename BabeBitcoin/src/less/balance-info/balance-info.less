@@ -1,0 +1,58 @@
+.balance-info {
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__button {
+        width: 110px;
+        align-self: flex-end;
+    }
+
+    &__content {
+        font-family: @mainFont;
+        color: @greyColor;
+        padding: 30px;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 60px);
+    }
+
+    &__balance {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__balance-value {
+        font-family: @secondaryFont;
+        font-size: 2.6em;
+        color: @darkGreyColor;
+    }
+
+    &__balance-currency {
+        font-size: 1em;
+    }
+
+    &__pending {
+        display: flex;
+        align-items: baseline;
+        font-size: 18px;
+    }
+
+    &__pending-value {
+        font-family: @secondaryFont;
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__pending-currency {
+        font-size: .6em;
+    }
+
+    &__status {
+        display: flex;
+        align-items: baseline;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,31 @@
+﻿{% extends "partials/base-block.html"  %}
+
+
+{% import "partials/buttons.html" as button %}
+{% import "partials/linear.html" as linear %}
+
+
+{% block baseBlockHeader %}
+
+<div class="bitcoin-sell-price">
+    Bitcoin Selling Price:
+    <div class="bitcoin-sell-price__price">
+        &nbsp;{{BuyBitcoin.CurrentPrice}}
+    </div>
+    <div class="bitcoin-sell-price__currency">
+        &nbsp;{{BuyBitcoin.Currency}}
+    </div>
+</div>
+<div>
+
+    {{ button.secondary('Sell Bitcoin') }}
+</div>
+{% endblock %}
+
+
+
+{% block baseBlockContent %}
+<div class="bitcoin-sell-price__content">
+    {{ linear.graph(SellBitcoin, 573,240) }}
+</div>
+{% endblock %}

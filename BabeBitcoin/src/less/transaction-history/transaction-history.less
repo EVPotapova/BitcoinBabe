@@ -1,0 +1,84 @@
+.transaction-history {
+    &__table {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: @mainFont;
+        color: @darkGreyColor;
+        font-size: 14px;
+    }
+
+    &__row {
+        min-height: 48px;
+        display: flex;
+        border-bottom: 1px solid @lightGreyColor;
+    }
+
+    &__headers {
+        min-height: 48px;
+        display: flex;
+        color: @blackColor;
+        border-bottom: 1px solid @lightGreyColor;
+        background-color: darken(@whiteColor,1%);
+    }
+
+    &__cell {
+        padding: 15px 0 15px 30px;
+        overflow: hidden;
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+    }
+
+    &__time {
+        color: @timeColor;
+    }
+
+    &__amount {
+        color: @positiveFontColor;
+    }
+
+    &__source {
+        color: @greyColor;
+    }
+
+    &__value {
+        color: @positiveFontColor;
+    }
+
+    &__value-currency {
+        color: @positiveFontColor;
+        font-size: 10px;
+    }
+
+    &__sort-icon {
+        color: @darkGreyColor;
+        display: none;
+        font-size: 12px;
+    }
+
+    &__cell:hover i {
+        display: block;
+    }
+
+    &__headers a:link {
+        text-decoration: none;
+    }
+
+    &__headers a:visited {
+        text-decoration: none;
+    }
+}

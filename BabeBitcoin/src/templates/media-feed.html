@@ -1,0 +1,30 @@
+﻿{% extends "partials/base-block.html"  %}
+
+
+{% import "partials/buttons.html" as button %}
+{% import "partials/feed-item.html" as feedItem %}
+
+
+{% block baseBlockHeader %}
+
+<div>
+    Social Media Feed
+</div>
+<div class="media-feed_buttons">
+    {{ button.secondary('See More') }}
+    {{ button.secondary('Update') }}
+</div>
+    {% endblock %}
+
+
+
+    {% block baseBlockContent %}
+
+<div class="media-feed__content">
+    {% for item in FeedItems %}
+
+    {{ feedItem.feed(item.Image, item.Name, item.Url, item.Date, item.Text)}}
+
+    {% endfor %}
+</div>
+    {% endblock %}

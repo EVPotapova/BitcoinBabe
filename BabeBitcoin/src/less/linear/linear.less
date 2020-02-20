@@ -1,81 +1,88 @@
-.linear__line {
-    stroke: @primaryActiveFontColor;
-    stroke-width: 2;
-    font-family: @mainFont;
-}
-.linear__modules {
-    stop-color: darken(@lightGreyColor, 7%);
-    stop-opacity: 1;
-}
+.linear {
 
-.linear__top {
-    display: flex;
-    justify-content: space-between;
-    height: 40px;
-    font-family: @mainFont;
-}
+    &__line {
+        stroke: @primaryActiveFontColor;
+        stroke-width: 2;
+        font-family: @mainFont;
+    }
 
-.linear__xMonth {
-    font-size: 10px;
-    text-transform: uppercase;
-    fill: @darkGreyColor;
-    line-height: .7em;
-    font-family: @mainFont;
-}
-.linear__tooltipValue {
-    font-size: 1.1em;
-    fill: @darkGreyColor;
-    font-family: @mainFont;
-}
-.linear__tooltipDate {
-    font-size: .7em;
-    fill: @darkGreyColor;
-    font-family: @mainFont;
-}
+    &__modules {
+        stop-color: darken(@lightGreyColor, 7%);
+        stop-opacity: 1;
+    }
 
-.linear__xDay {
-    display: flex;
-    flex-direction: column;
-    fill: @darkGreyColor;
-    font-family: @mainFont;
-    line-height: .7em;
-}
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        font-family: @mainFont;
+    }
 
-.linear__dot {
-    stroke-width: 0;
-    fill: transparent;
-}
+    &__xMonth {
+        font-size: 10px;
+        text-transform: uppercase;
+        fill: @darkGreyColor;
+        line-height: .7em;
+        font-family: @mainFont;
+    }
 
-.linear__dot:hover {
-    stroke: @primaryBgColor;
-    stroke-width: 2;
-    fill: @whiteColor;
-}
+    &__tooltipValue {
+        font-size: 1.1em;
+        fill: @darkGreyColor;
+        font-family: @mainFont;
+    }
 
-.linear__dot:hover + .linear__tooltip {
-    display: block;
-}
+    &__tooltipDate {
+        font-size: .7em;
+        fill: @darkGreyColor;
+        font-family: @mainFont;
+    }
 
-.linear__tooltip {
-    display: none;
-}
-.linear__tooltipBody {
-    stroke-width: 1;
-    stroke: @lightGreyColor;
-    stroke-linejoin: round;
-}
+    &__xDay {
+        display: flex;
+        flex-direction: column;
+        fill: @darkGreyColor;
+        font-family: @mainFont;
+        line-height: .7em;
+    }
 
-.linear__background {
-    fill: @lightGreyColor;
-}
+    &__dot {
+        stroke-width: 0;
+        fill: transparent;
+    }
 
-.linear__legend {
-    fill: @whiteColor;
-    stroke-width: 1;
-    stroke: @lightGreyColor;
-    stroke-linejoin: round;
-}
+    &__dot:hover {
+        stroke: @primaryBgColor;
+        stroke-width: 2;
+        fill: @whiteColor;
+    }
 
-.linear__svg {
-   background-color: white;
+    &__dot:hover + &__tooltip {
+        display: block;
+    }
+
+    &__tooltip {
+        display: none;
+    }
+
+    &__tooltipBody {
+        stroke-width: 1;
+        stroke: @lightGreyColor;
+        stroke-linejoin: round;
+    }
+
+    &__background {
+        fill: @lightGreyColor;
+    }
+
+    &__legend {
+        fill: @whiteColor;
+        stroke-width: 1;
+        stroke: @lightGreyColor;
+        stroke-linejoin: round;
+    }
+
+    &__svg {
+        background-color: white;
+    }
 }

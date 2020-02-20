@@ -1,0 +1,21 @@
+﻿{% macro feed(image, name, url, date, text) %}
+<div class="feed-item">
+    <div class="feed-item__header">
+        
+           <img class="feed-item__image" src="images/avatars/{{image}}" alt="{{name}}">
+        
+        <div class="feed-item__info">
+            <div class="feed-item__username">
+                <a href="{{url}}">{{name}}</a>
+            </div>
+            <div class="feed-item__date">
+                {{date}}
+            </div>
+        </div>
+
+    </div>
+    <div class="feed-item__text">
+        {{text}}
+    </div>
+</div>
+{% endmacro %}

@@ -13,15 +13,15 @@
 <nav>
     <ul class="tabs_navigation">
         <!--INFO TAB-->
-        <li class="tab_0">
+        <li class="tabs_navigation-tab tab_0">
             <!--comment-alt-exclamation only in pro-->
             <label for="tab_0">
-                <i class="fa fa-question-circle"></i>
+                <i class="icon icon-question-circle"></i>
             </label>
         </li>
         <!--DYNAMIC TABS-->
         {% for item in names %}
-        <li class="tab_{{loop.index}}">
+        <li class="tabs_navigation-tab tab_{{loop.index}}">
             <label for="tab_{{loop.index}}">{{item}}</label>
         </li>
         {% endfor %}

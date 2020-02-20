@@ -1,24 +1,41 @@
-.messages__item {
-    display: flex;
-    border: 1px dotted @lightGreyColor;
-    border-radius: 3px;
-    padding: 10px 15px;
-    margin-top: 25px;//TODO: No margin here
-}
+
 .messages {
     font-family: @mainFont;
     font-size: 14px;
-}
 
+    &__item {
+        display: flex;
+        border: 1px dotted @lightGreyColor;
+        border-radius: 3px;
+        padding: 10px 15px;
+        margin-top: 25px; //TODO: No margin here
+    }
 
-.messages__text {
-    color: @darkGreyColor;
-}
+    &__text {
+        color: @darkGreyColor;
+    }
 
-.messages__closeBtn i {
-    color: @greyColor;
-}
+    &__close-btn .icon {
+        color: @greyColor;
+    }
 
-.messages__closeBtn{
-    margin-left: auto; 
+    &__close-btn a {
+        text-decoration: none;
+    }
+
+    &__close-btn {
+        margin-left: auto;
+    }
+
+    &__item_type_warning {
+        background-color: @warningColor;
+    }
+
+    &__item_type_error {
+        background-color: @errorColor;
+    }
+
+    &__item_type_normal {
+        background-color: @positiveFontColor;
+    }
 }
