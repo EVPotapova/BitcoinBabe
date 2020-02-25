@@ -10,31 +10,35 @@
         display: none;
     }
 
-    &_navigation .tabs_navigation-tab {
+    &__navigation-tab {
         font-family: @mainFont;
         flex-grow: 1;
         display: flex;
         justify-content: center;
         background-color: #f2f2f2;
-        height: 100%;
+        
         align-items: center;
         color: #9b9b9c;
-        border-bottom: 1px solid #e2e2e2;
         border-top: 1px solid #e2e2e2;
+        border-left: 1px solid #e2e2e2;
+        padding: 23px 0 23px 0;
+    }
+
+
+    &__navigation-tab_position_last {
         border-right: 1px solid #e2e2e2;
     }
 
-    &_navigation {
+    &__navigation {
         display: flex;
         width: 100%;
         align-items: center;
-        height: 85px;
         margin: 0;
         padding: 0;
         /*border-left: 1px solid #e2e2e2;*/
     }
 
-    &_navigation .tab_0 {
+    &__navigation .tab_0 {
         width: 105px;
         flex-grow: 0;
     }
@@ -56,6 +60,6 @@
     .make-tabs-content();
 
     &__tab {
-        height: 100%;
+        
     }
 }

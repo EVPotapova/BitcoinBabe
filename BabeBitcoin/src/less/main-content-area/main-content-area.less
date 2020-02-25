@@ -3,29 +3,33 @@
     flex-direction: column;
     margin-top: 25px;
     align-items: stretch;
-    height: 1010px;
     justify-content: space-between;
 
     &__firstRow {
         display: flex;
         justify-content: space-between;
-        height: 325px;
+        max-height: 325px;
     }
 
-    &__accountBalance {
+    &__account-balance {
         flex-basis: 355px;
         flex-grow: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     &__transaction-history {
         flex-basis: 790px;
         flex-grow: 0;
+        display: flex;
+        flex-direction: column;
     }
 
-    &__secondRow {
+    &__second-row {
         display: flex;
         justify-content: space-between;
-        height: 665px;
+        max-height: 665px;
+        margin-top: 25px;
     }
 
     &__prices {
@@ -36,12 +40,14 @@
         flex-grow: 0;
     }
 
-    &__bitcoinBuyPrice {
+    &__bitcoin-buy-price {
         flex-basis: 320px;
         flex-grow: 0;
+        display: flex;
+        flex-direction: column;
     }
 
-    &__bitcoinSellPrice {
+    &__bitcoin-sell-price {
         flex-basis: 320px;
         flex-grow: 0;
     }
@@ -49,8 +55,9 @@
     &__feed {
         flex-basis: 575px;
         flex-grow: 0;
+        display: flex;
+        flex-direction: column;
     }
-
     /*margin*/
     &_margin_left {
         margin-left: 10px;
@@ -63,7 +70,6 @@
     &_margin_top {
         margin-top: 20px;
     }
-
     /*border*/
     &_border {
         border: 1px solid @lightGreyColor;

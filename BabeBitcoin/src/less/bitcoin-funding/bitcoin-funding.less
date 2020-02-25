@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    height: 100%;
+    
 
     &__step-msg {
         display: flex;
@@ -18,7 +18,7 @@
     }
 
     &__step-line {
-        height: calc((100% - @square) / 2);
+        flex-grow: 1;
         width: 10px;
         box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,.1);
     }
@@ -80,13 +80,12 @@
 
     &__step {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         line-height: 1.3em;
     }
 
     &__step-img {
         width: 40px;
-        height: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -94,6 +93,7 @@
     }
 
     &__step-body {
+        padding: 40px 0 40px 0;
         margin-left: 30px;
     }
 
@@ -101,12 +101,12 @@
 
     &__step-square {
         width: @square;
-        height: calc(@square - 7px);
         border-radius: .2em;
         box-shadow: 0px 0px 3px 1px rgba(0,0,0,.1);
         font-family: @secondaryFont;
         font-size: 18px;
         text-align: center;
-        padding-top: 7px;
+        padding: 7px 0 7px 0;
+        flex-grow: 0;
     }
 }

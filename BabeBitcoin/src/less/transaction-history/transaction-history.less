@@ -1,7 +1,7 @@
 .transaction-history {
     &__table {
         width: 100%;
-        height: 100%;
+        
         display: flex;
         flex-direction: column;
         font-family: @mainFont;
@@ -10,13 +10,11 @@
     }
 
     &__row {
-        min-height: 48px;
         display: flex;
         border-bottom: 1px solid @lightGreyColor;
     }
 
     &__headers {
-        min-height: 48px;
         display: flex;
         color: @blackColor;
         border-bottom: 1px solid @lightGreyColor;
@@ -30,10 +28,17 @@
         align-items: baseline;
     }
 
+
+    &__button {
+        width: 110px;
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__body {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        
         overflow-y: auto;
     }
 

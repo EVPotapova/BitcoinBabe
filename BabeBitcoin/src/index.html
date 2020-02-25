@@ -9,27 +9,27 @@
 {% endblock %}
 
 {% block contentArea %}
-<div class="main-content-area">
-    <div class="main-content-area__firstRow">
-        <div class="main-content-area__accountBalance main-content-area_border">
-            {%include "templates/balance-info.html"%}
-        </div>
-        <div class="main-content-area__transaction-history main-content-area_border">
-            {%include "templates/transaction-history.html"%}
-        </div>
-    </div>
-    <div class="main-content-area__secondRow">
-        <div class="main-content-area__prices">
-            <div class="main-content-area__bitcoinBuyPrice main-content-area_border">
-                {%include "templates/bitcoin-price.html"%}
+    <section class="main-content-area">
+        <div class="main-content-area__firstRow">
+            <div class="main-content-area__account-balance main-content-area_border">
+                {%include "templates/balance-info.html"%}
             </div>
-            <div class="main-content-area__bitcoinSellPrice main-content-area_border">
-                {%include "templates/bitcoin-selling-price.html"%}
+            <div class="main-content-area__transaction-history main-content-area_border">
+                {%include "templates/transaction-history.html"%}
             </div>
         </div>
-        <div class="main-content-area__feed main-content-area_border">
-            {%include "templates/media-feed.html"%}
+        <div class="main-content-area__second-row">
+            <div class="main-content-area__prices">
+                <div class="main-content-area__bitcoin-buy-price main-content-area_border">
+                    {%include "templates/bitcoin-price.html"%}
+                </div>
+                <div class="main-content-area__bitcoin-sell-price main-content-area_border">
+                    {%include "templates/bitcoin-selling-price.html"%}
+                </div>
+            </div>
+            <div class="main-content-area__feed main-content-area_border">
+                {%include "templates/media-feed.html"%}
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 {% endblock %}

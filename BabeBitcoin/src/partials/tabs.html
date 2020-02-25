@@ -11,9 +11,9 @@
 {% endfor %}
 
 <nav>
-    <ul class="tabs_navigation">
+    <ul class="tabs__navigation">
         <!--INFO TAB-->
-        <li class="tabs_navigation-tab tab_0">
+        <li class="tabs__navigation-tab tab_0">
             <!--comment-alt-exclamation only in pro-->
             <label for="tab_0">
                 <i class="icon icon-question-circle"></i>
@@ -21,9 +21,16 @@
         </li>
         <!--DYNAMIC TABS-->
         {% for item in names %}
-        <li class="tabs_navigation-tab tab_{{loop.index}}">
+        <li class="tabs__navigation-tab tab_{{loop.index}}">
             <label for="tab_{{loop.index}}">{{item}}</label>
         </li>
+
+        {% if loop.last %}
+
+        <li class="tabs__navigation-tab tabs__navigation-tab_position_last tab_{{loop.index}}">
+            <label for="tab_{{loop.index}}">{{item}}</label>
+        </li>
+        {%endif%}
         {% endfor %}
     </ul>
 </nav>

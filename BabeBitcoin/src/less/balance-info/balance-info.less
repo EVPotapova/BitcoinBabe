@@ -6,7 +6,9 @@
 
     &__button {
         width: 110px;
-        align-self: flex-end;
+        display: flex;
+        justify-content: space-between;
+        align-self:flex-end;
     }
 
     &__content {
@@ -16,7 +18,7 @@
         justify-content: space-between;
         display: flex;
         flex-direction: column;
-        height: calc(100% - 60px);
+        flex-grow: 1;
     }
 
     &__balance {
